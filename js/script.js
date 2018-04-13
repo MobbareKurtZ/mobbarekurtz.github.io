@@ -14,15 +14,27 @@ jQuery(window).scroll(function () {
 
 });
 
-AOS.init();
-
 $(document).ready(function () {
-    //  INDEX PARALLAX ${scroll_color}
+    //  TITLE GLITCH
+    $('.glitch').glitch({ minint: 1, maxint: 5, maxglitch: 15, hshift: 5, vshift: 10, direction: 'random' });
+    //  TITLE CHANGE
+    var titles = ["TITLE1", "TITLE2", "TITLE3", "TITLE4"];
+    var i = 0;
+    setInterval(function () {
+        $(".glitch").text(titles[i]);
+        if (i == titles.length)
+            i = 0;
+        else
+            i++;
+    }, 1 * 15000);
+    //  INDEX PARALLAX
     $(".paroller, [data-paroller-factor]").paroller({
         factor: 0.6,
         type: 'background',
         direction: 'vertical'
     });
+
+
     /*$(function() {
         $.scrollify({
           section : ".snap",

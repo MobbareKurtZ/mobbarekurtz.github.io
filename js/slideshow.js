@@ -6,6 +6,8 @@ $(function () {
             { src: "img/slide3.jpg" },
             { src: "img/slide4.jpg" }
         ],
-        transition: 'burn2'
+        delay: 15000,
+        transitionDuration: 1000,
+        transition: 'flash2'
     });
 });
