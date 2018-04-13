@@ -1,0 +1,170 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h4 {
+    font-family: 'Poiret One', sans-serif;
+}
+
+h5 {
+    font-family: 'Poiret One', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-areas: 
+    "in1 in1 in1 in1 in1"
+    "in1 in1 in1 in1 in1"
+    "in1 in1 in1 in1 in1"
+    "in1 in1 in1 in1 in1"
+    "in1 in1 in1 in1 in1"
+    "in1 in1 in1 in1 in1"
+    "in1 in1 in1 in1 in1"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in2 in2 in2 in2 in2"
+    "in3 in3 in3 in3 in3"
+    "in3 in3 in3 in3 in3"
+    "in3 in3 in3 in3 in3"
+    "in3 in3 in3 in3 in3"
+    "in3 in3 in3 in3 in3"
+}
+
+#navbar {
+    grid-area: nvb;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%,rgba(0, 0, 0, 0.8) 100%);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    color: white;
+    z-index: 100;
+}
+
+#in1 {
+    grid-area: in1;
+    height: 100vh;
+    width: 100%;
+}
+
+.paroller {
+    background-image: url("../img/bike.jpg");
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#index_main {
+    height: 60%;
+    background: black;
+    color: white;
+    margin: 30px 60px 60px 60px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(6, 16.7%);
+    grid-template-rows: 70px repeat(6, 1fr);
+    grid-template-areas: 
+    "trd tit tit tit tit tit"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+}
+
+.mn_title {
+    grid-area: tit;
+    z-index: 10;
+    width: 100px;
+    height: 60px;
+    margin: auto;
+    top: 20px;
+}
+
+.mn_title h1 {
+}
+
+.trending {
+    grid-area: trd;
+    background-color: white;
+    margin: 10px;
+    height: 110px;
+    width: 25px;
+    z-index: 5;
+}
+
+.trending h3 {
+    transform: rotate(270deg);
+    color: black;
+    bottom: -60px;
+    position: relative;
+}
+
+.mn_slideshow {
+    grid-area: sld;
+    background: transparent;
+    margin: 0px 40px 40px 40px;
+}
+
+.mn_box {
+    background-color: white;
+    position: absolute;
+    height: 70px;
+    width: 50px;
+    bottom: 50px;
+    right: 10px;
+    margin: 5px;
+    color: black;
+    text-align: center;
+}
+
+.mn_box h1 {
+    color: black;
+    position: relative;
+    transform: rotate(270deg);
+    bottom: 5px;
+}
+
+#in2 {
+    grid-area: in2;
+    height: 100vh;
+    background: orange;
+}
+
+#in3{
+    grid-area: in3;
+    background: purple;
+}
