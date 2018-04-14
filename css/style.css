@@ -88,7 +88,7 @@ p {
     background-image: url("../img/bike.jpg");
     background-size: cover;
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     z-index: -10;
 }
