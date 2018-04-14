@@ -87,6 +87,7 @@ p {
 #in1 .paroller {
     background-image: url("../img/bike.jpg");
     background-size: cover;
+    background-attachment: fixed;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -177,9 +178,6 @@ p {
 }
 
 #in2 article div {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     background-color: black;
     color: white;
     mix-blend-mode: multiply;
@@ -190,8 +188,7 @@ p {
 
 #in2 article h1 {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: -13px;
 }
 
 .men {
@@ -200,6 +197,9 @@ p {
     text-align: center;
     background-image: url('../img/men.jpg');
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .women {
@@ -208,14 +208,20 @@ p {
     text-align: center;
     background-image: url('../img/women.jpg');
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .insp {
     width: 100%;
     height: 100%;
     text-align: center;
-    background-image: url('../img/wall.jpg');
+    background-image: url('../img/wall3.jpg');
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #in3{
@@ -292,6 +298,8 @@ p {
 #in3 .paroller {
     background-image: url("../img/grafitti.jpg");
     background-size: 120%;
+    background-attachment: fixed;
+    background-position: bottom;
     position: absolute;
     width: 100%;
     height: 400px;
