@@ -157,6 +157,7 @@ p {
 .mn_box h1 {
     color: black;
     position: relative;
+    top: -30px;
     transform: rotate(270deg);
     bottom: 23px;
     font-size: 2.5em;
@@ -166,6 +167,50 @@ p {
     grid-area: in2;
     height: 100vh!important;
     background: orange;
+    display: flex;
+    flex-direction: column;
+}
+
+#in2 article div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    mix-blend-mode: multiply;
+    height: 30px;
+    width: 130px;
+    margin: auto;
+}
+
+#in2 article h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.men {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image: url('../img/men.jpg');
+    background-size: cover;
+}
+
+.women {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image: url('../img/women.jpg');
+    background-size: cover;
+}
+
+.insp {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image: url('../img/wall.jpg');
+    background-size: cover;
 }
 
 #in3{
