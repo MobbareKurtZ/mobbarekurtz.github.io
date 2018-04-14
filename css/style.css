@@ -87,10 +87,10 @@ p {
 #in1 .paroller {
     background-image: url("../img/bike.jpg");
     background-size: cover;
-    background-attachment: fixed;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
+    z-index: -10;
 }
 
 #index_main {
@@ -172,7 +172,6 @@ p {
 #in2 {
     grid-area: in2;
     height: 100vh!important;
-    background: orange;
     display: flex;
     flex-direction: column;
 }
@@ -293,17 +292,6 @@ p {
     color: white;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
-}
-
-#in3 .paroller {
-    background-image: url("../img/grafitti.jpg");
-    background-size: 120%;
-    background-attachment: fixed;
-    background-position: bottom;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    z-index: -5;
 }
 
 #in3 .gradol {
