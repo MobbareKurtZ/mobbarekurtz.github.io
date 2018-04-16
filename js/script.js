@@ -16,7 +16,7 @@ jQuery(window).scroll(function () {
 
 $(document).ready(function () {
     //  TITLE GLITCH
-    //$('.glitch').glitch({ minint: 1, maxint: 5, maxglitch: 15, hshift: 5, vshift: 10, direction: 'random' });
+    $('.glitch').glitch({ minint: 1, maxint: 5, maxglitch: 15, hshift: 5, vshift: 10, direction: 'random' });
     //  TITLE CHANGE
     $(function () {
         i = 0;
@@ -32,8 +32,7 @@ $(document).ready(function () {
             var vh = $(window).height();
             var vw = $(window).width();
             var scroll_pos = $(this).scrollTop();
-            var newSize = scroll_pos*(vw/(vh-60));
-            console.log(newSize)
+            var newSize = scroll_pos * (vw / (vh - 60));
             $(".underlay").width(newSize);
         });
     });
