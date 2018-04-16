@@ -1,19 +1,3 @@
-/*var scroll_pos = 0;
-var bar_width = 0;
-
-jQuery(window).scroll(function () {
-    scroll_pos = $(this).scrollTop();
-    if (jQuery(window).scrollTop() < 0) {
-        scroll_pos = 0 - 0 * scroll_pos;
-
-    }
-    else {
-        bar_width = 0 + 0.62 * scroll_pos;
-    }
-    jQuery(".underlay").width(bar_width);
-
-});*/
-
 $(document).ready(function () {
     //  TITLE GLITCH
     $('.glitch').glitch({ minint: 1, maxint: 5, maxglitch: 15, hshift: 5, vshift: 10, direction: 'random' });
@@ -26,7 +10,7 @@ $(document).ready(function () {
             i++;
         }, 15000);
     });
-
+    //  NAVBAR SCROLL WIDTH
     $(function () {
         $(window).scroll(function () {
             var vh = $(window).height();
@@ -36,22 +20,4 @@ $(document).ready(function () {
             $(".underlay").width(newSize);
         });
     });
-
-    //  INDEX PARALLAX
-    /*$(".paroller, [data-paroller-factor]").paroller({
-        factor: 0.6,
-        type: 'background',
-        direction: 'vertical'
-    });*/
-
-
-
-
-
-    /*$(function() {
-        $.scrollify({
-          section : ".snap",
-          scrollSpeed: 1500,
-        });
-      });*/
 });
