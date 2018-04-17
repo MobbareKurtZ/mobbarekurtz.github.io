@@ -6,8 +6,9 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: inherit;
     color: inherit;
+    font-size: inherit;
 }
 
 h1 {
@@ -176,16 +177,16 @@ p {
     flex-direction: column;
 }
 
-#in2 article div {
+#in2 a div {
     background-color: black;
     color: white;
     mix-blend-mode: multiply;
-    height: 30px;
-    width: 130px;
+    height: 40px;
+    width: 160px;
     margin: auto;
 }
 
-#in2 article h1 {
+#in2 a h1 {
     position: relative;
     top: -13px;
 }
