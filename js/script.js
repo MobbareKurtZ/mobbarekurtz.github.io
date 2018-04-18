@@ -34,8 +34,9 @@ $(document).ready(function () {
         });
     });
     var vh = $(window).height();
-    $('.menuic').clickToggle(function () {
+    $('.hamburger').clickToggle(function () {
         var vw = $(window).width();
+        $('.hamburger').addClass('is-active');
         $('.underlay').addClass('ulfull');
         if ($(".underlay").width() > vw) {
             $('.nav').addClass('navdown');
@@ -46,6 +47,7 @@ $(document).ready(function () {
         }
     }, function () {
         var vw = $(window).width();
+        $('.hamburger').removeClass('is-active');
         $('.nav').removeClass('navdown');
         setTimeout(function () {
             $('.underlay').removeClass('ulfull');
