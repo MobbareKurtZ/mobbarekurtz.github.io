@@ -35,6 +35,10 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+button {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 #navbar {
     grid-area: nvb;
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.8) 100%);
@@ -127,12 +131,12 @@ p {
     width: 100%;
     height: 100%;
     margin: 0px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 400px;
     grid-template-areas: 
-    "in1 in1 in1 in1 in1"
-    "in2 in2 in2 in2 in2"
-    "in3 in3 in3 in3 in3"
+    "in1"
+    "in2"
+    "in3"
 }
 
 #insec1 {
@@ -359,6 +363,12 @@ p {
     z-index: -1;
 }
 
+/*-----------MEN--------*/
+
+.navwhite {
+    width: 100vw;
+}
+
 #wrapper_men {
     display: grid;
     width: 100%;
@@ -379,7 +389,37 @@ p {
     flex-direction: column;
 }
 
+.altbtn {
+    flex-direction: row;
+    display: flex;
+    background-image: url('../img/wall.jpg');
+    background-size: cover;
+}
 
+.altbtn h3 {
+    margin: 0;
+}
+
+.catbtn {
+    display: block;
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    outline: 0;
+}
+
+.colbtn {
+    display: block;
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    margin: 20px;
+    height: 40px;
+    outline: 0;
+}
 
 .material-icons {
     font-family: 'Material Icons';
