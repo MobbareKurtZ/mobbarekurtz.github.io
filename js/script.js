@@ -27,7 +27,7 @@ $(document).ready(function () {
     $(function () {
         $(window).scroll(function () {
             var vw = $(window).width();
-            var pos = $('#in2').offset().top;
+            var pos = $('#insec2').offset().top;
             var scrollPos = $(this).scrollTop();
             var newSize = scrollPos * (vw / (pos - 60));
             $(".underlay").width(newSize);
