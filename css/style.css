@@ -42,7 +42,10 @@ p {
     margin: 0px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr 400px;
-    grid-template-areas: "in1 in1 in1 in1 in1" "in2 in2 in2 in2 in2" "in3 in3 in3 in3 in3"
+    grid-template-areas: 
+    "in1 in1 in1 in1 in1"
+    "in2 in2 in2 in2 in2"
+    "in3 in3 in3 in3 in3"
 }
 
 #navbar {
@@ -150,7 +153,14 @@ p {
     display: grid;
     grid-template-columns: repeat(6, 16.7%);
     grid-template-rows: 70px repeat(6, 1fr);
-    grid-template-areas: "trd tit tit tit tit tit" "sld sld sld sld sld sld" "sld sld sld sld sld sld" "sld sld sld sld sld sld" "sld sld sld sld sld sld" "sld sld sld sld sld sld" "sld sld sld sld sld sld"
+    grid-template-areas:
+    "trd tit tit tit tit tit"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
+    "sld sld sld sld sld sld"
 }
 
 .mn_title {
