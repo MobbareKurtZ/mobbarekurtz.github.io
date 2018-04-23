@@ -33,7 +33,8 @@ $(document).ready(function () {
             $(".underlay").width(newSize);
         });
     });
-    var vh = $(window).height();
+
+    //  NAV MENU
     $('.hamburger').clickToggle(function () {
         var vw = $(window).width();
         $('.hamburger').addClass('is-active');
@@ -52,5 +53,13 @@ $(document).ready(function () {
         setTimeout(function () {
             $('.underlay').removeClass('ulfull');
         }, 400);
+    });
+
+    //  CART
+    var vh = $(window).height();
+    $(".cart").height(vh - 60);
+    $('.cartic').click(function () {
+        $('.cart').toggleClass('cartout');
+        $('.underlay').toggleClass('ulfull');
     });
 });
