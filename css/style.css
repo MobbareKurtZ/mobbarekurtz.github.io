@@ -70,7 +70,7 @@ button {
     left: 10px;
     mix-blend-mode: difference;
     color: white;
-    outline:0;
+    outline: 0;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -387,7 +387,7 @@ button {
     z-index: -1;
 }
 
-/*-----------MEN--------*/
+/*--------MEN--------*/
 
 .navwhite {
     width: 100vw;
