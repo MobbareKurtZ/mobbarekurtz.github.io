@@ -58,8 +58,18 @@ $(document).ready(function () {
     //  CART
     var vh = $(window).height();
     $(".cart").height(vh - 60);
-    $('.cartic').click(function () {
-        $('.cart').toggleClass('cartout');
-        $('.underlay').toggleClass('ulfull');
+    $("#cartic").click(function () {
+        $('.cart').addClass('cartout');
+        $('.underlay').addClass('ulfull');
+        $("#cartic").addClass("animatebottom");
+        $("#cross").addClass("animatetop");
+
+    });
+    $("#cross").click(function () {
+        $('.cart').removeClass('cartout');
+        $('.underlay').removeClass('ulfull');
+        $("#cross").removeClass("animatetop");
+        $("#cartic").removeClass("animatebottom");
+        
     });
 });

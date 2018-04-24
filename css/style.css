@@ -90,13 +90,41 @@ button {
     mix-blend-mode: difference;
 }
 
-.cartic {
+.navcart {
     position: absolute;
-    top: 8px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     mix-blend-mode: difference;
     color: white;
     z-index: 10000;
+    width: 70px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#cartic {
+    transition: 0.5s ease-in-out all;
+    position: absolute;
+    top: 11px;
+}
+
+#cross {
+    position: absolute;
+    top: -30px;
+    display: block;
+    transition: 0.5s ease-in-out all;
+}
+
+.animatebottom {
+    top: 60px!important;
+    transition: 0.5s ease-in-out all;
+}
+
+.animatetop {
+    top: 11px!important;
+    transition: 0.5s ease-in-out all;
 }
 
 .nav {
@@ -123,6 +151,7 @@ button {
     height: 50vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-size: 25px;
     letter-spacing: 5px;
 }
@@ -135,6 +164,7 @@ button {
     z-index: 10;
     margin-top: 60px;
     right: -70vw;
+    transition: 0.5s ease-in-out all;
 }
 
 .cart h4 {
@@ -146,6 +176,7 @@ button {
 
 .cartout {
     right: 0px;
+    transition: 0.5s ease-in-out all;
 }
 
 /*--------INDEX--------*/
@@ -339,11 +370,19 @@ button {
 .aboutlist {
     list-style: none;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
 }
 
 .supportlist {
     list-style: none;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
 }
 
 .sub {
@@ -418,6 +457,8 @@ button {
     display: flex;
     background-image: url('../img/wall.jpg');
     background-size: 100%;
+    -webkit-filter: invert(1);
+    filter: invert(1);
 }
 
 .altbtn h3 {
