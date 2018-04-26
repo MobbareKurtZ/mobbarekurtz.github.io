@@ -52,11 +52,25 @@ button {
     flex-direction: row;
 }
 
-.underlay {
+.navfiller {
     background-color: white;
     position: absolute;
     height: 100%;
     transition: 0.2s ease all;
+}
+
+.cartfill {
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    right: -100vw;
+    transition: 1s ease all;
+}
+
+.cartfiller {
+    right: 0px;
+    transition: 1s ease all;
 }
 
 .ulfull {
@@ -132,7 +146,7 @@ button {
     height: 0vh;
     position: fixed;
     background-color: white;
-    z-index: 1;
+    z-index: 90;
     transition: 0.5s ease-in-out all;
     overflow: hidden;
 }
@@ -161,7 +175,7 @@ button {
     height: 100%;
     width: 70vw;
     background: white;
-    z-index: 10;
+    z-index: 90;
     margin-top: 60px;
     right: -70vw;
     transition: 0.5s ease-in-out all;
@@ -177,6 +191,15 @@ button {
 .cartout {
     right: 0px;
     transition: 0.5s ease-in-out all;
+}
+
+.paroller {
+    background-image: url("../img/bike.jpg");
+    background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -10;
 }
 
 /*--------INDEX--------*/
@@ -198,15 +221,6 @@ button {
     grid-area: in1;
     height: 100vh;
     width: 100%;
-}
-
-.paroller {
-    background-image: url("../img/bike.jpg");
-    background-size: cover;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    z-index: -10;
 }
 
 #index_main {
@@ -390,8 +404,6 @@ button {
 }
 
 .sub h4 {
-    position: relative;
-    top: 10px;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -457,8 +469,7 @@ button {
     display: flex;
     background-image: url('../img/wall.jpg');
     background-size: 100%;
-    -webkit-filter: invert(1);
-    filter: invert(1);
+    z-index: 20;
 }
 
 .altbtn h3 {
@@ -475,13 +486,85 @@ button {
     margin: 20px;
     height: 40px;
     outline: 0;
-    background: black;
+    background-color: black;
 }
 
 .catbtn div, .colbtn div {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: url('../img/wall.jpg');
+    background-color: black;
+    color: white;
+    mix-blend-mode: multiply;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.altbtn button {
+    background-color: transparent;
+}
+
+.altbtn h3 {
+    position: relative;
+    top: 7px;
+}
+
+.catout{ 
+    left: 0px!important;
+    transition: 0.5s ease-in-out all;
+}
+
+.cat {
+    position: fixed;
+    margin-top: 80px;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    left: -100vw;
+    transition: 0.5s ease-in-out all;
+}
+
+.cat ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+    padding: 0px;
+    justify-content: center;
+}
+
+.cat li {
+    display: block;
+    width: 40vw;
+    height: 50vw;
+    margin: 10px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.cat button {
+    display: block;
+    height: 10vw;
+    width: 30vw;
+    outline: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.cat div {
+    background-color: black;
+    color: white;
+    mix-blend-mode: multiply;
+    
+    height: 100%;
+}
+
+.cat h3 {
+    margin-top: 7px;
+}
+
+.mencat1 {
+    background-image: url("../img/shirt.jpg");
 }
 
 .productlist {
@@ -491,25 +574,75 @@ button {
     list-style: none;
     padding: 0px;
     justify-content: center;
+    transition: 0.2s ease-in-out all;
 }
 
 .productlist li {
-    background: red;
-    width: 40vw;
-    height: 130px;
+    margin-bottom: 30px;
+    min-width: 45vw;
+}
+
+.productlist li > div {
+    padding-top: 120%;
     margin: 10px;
     display: block;
     position: relative;
 }
 
 .producttxt {
-    position: absolute;
     bottom: 10px;
     right: 10px;
+    text-align: center;
+}
+
+.producttxt h4 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .producttxt h3,h4 {
     margin: 0px;
+}
+
+.mp1{
+    background-image: url("../img/shirt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mp2{
+    background-image: url("../img/shirt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mp3{
+    background-image: url("../img/shirt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mp4{
+    background-image: url("../img/shirt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mp5{
+    background-image: url("../img/shirt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mp6{
+    background-image: url("../img/shirt.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .material-icons {
