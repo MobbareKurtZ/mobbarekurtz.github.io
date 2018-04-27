@@ -481,30 +481,40 @@ button {
 .colbtn, .catbtn {
     display: block;
     width: 100%;
-    color: black;
+    color: white;
     border: none;
     margin: 20px;
     height: 40px;
+    width: 140px;
     outline: 0;
     background-color: black;
 }
 
-.catbtn div, .colbtn div {
-    background-color: black;
-    color: white;
-    mix-blend-mode: multiply;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+.altbtnsmall {
+    width: 140px;
+    height: 60px;
+    position: fixed;
+    top: -20px;
+    transition: 0.3s ease-in-out all;
+    opacity: 0;
 }
 
-.altbtn button {
-    background-color: transparent;
+.altbtnsmall.colbtn {
+    right: 0px;
 }
 
-.altbtn h3 {
+.altbtndown {
+    width: 60px;
+    border-radius: 30px;
+    top: 50px;
+    transition: 0.3s ease-in-out all;
+    opacity: 1;
+    
+}
+
+.altbtn i {
     position: relative;
-    top: 7px;
+    left: 13px;
 }
 
 .catout{ 
@@ -514,16 +524,21 @@ button {
 
 .cat {
     position: fixed;
-    margin-top: 80px;
     width: 100vw;
     height: 100%;
     background-color: white;
     z-index: 10;
     left: -100vw;
     transition: 0.5s ease-in-out all;
+    text-align: center;
+}
+
+.cat h2{
+    margin-top: 20px;
 }
 
 .cat ul {
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -543,27 +558,33 @@ button {
 }
 
 .cat button {
-    display: block;
-    height: 10vw;
-    width: 30vw;
+    height: 30px;
+    width: 100px;
     outline: 0;
     background-color: transparent;
     border: none;
-}
-
-.cat div {
-    background-color: black;
-    color: white;
-    mix-blend-mode: multiply;
-    
-    height: 100%;
+    padding: 0px;
+    background-color: white;
+    color: black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .cat h3 {
-    margin-top: 7px;
+    margin-top: 4px;
 }
 
 .mencat1 {
+    background-image: url("../img/shirt.jpg");
+}
+.mencat2 {
+    background-image: url("../img/shirt.jpg");
+}
+.mencat3 {
+    background-image: url("../img/shirt.jpg");
+}
+.mencat4 {
     background-image: url("../img/shirt.jpg");
 }
 

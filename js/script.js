@@ -23,7 +23,7 @@ $(document).ready(function () {
         vshift: 10,
         direction: 'random'
     });
-    
+
     //  NAVBAR SCROLL WIDTH
     if ($("#wrapper_in").length) {
         $(function () {
@@ -89,6 +89,15 @@ $(document).ready(function () {
     });
 
     //  CAT&COL
+    $(window).scroll(function (event) {
+        var scrollPos = $(this).scrollTop();
+        if (80 < scrollPos) {
+            $(".altbtnsmall").addClass("altbtndown");
+        };
+        if (80 > scrollPos) {
+            $(".altbtnsmall").removeClass("altbtndown");
+        };
+    });
     $(".catbtn").click(function () {
         $(".cat").toggleClass("catout");
     });
