@@ -88,7 +88,7 @@ $(document).ready(function () {
         $("#cartic").removeClass("animatebottom");
     });
 
-    //  CAT&COL
+    //  CATEGORIES
     $(window).scroll(function (event) {
         var scrollPos = $(this).scrollTop();
         if (80 < scrollPos) {
@@ -101,7 +101,31 @@ $(document).ready(function () {
     $(".catbtn").click(function () {
         $(".cat").toggleClass("catout");
     });
-    $(".colbtn").click(function () {
-        $(".col").toggleClass("colout");
+    $(".closebtn").click(function () {
+        $(".cat").removeClass("catout");
+    });
+    $(".mencat1").click(function() {
+        $(".cat").removeClass("catout");
+        $('html, body').animate({
+            scrollTop: $("#jackets").offset().top - 60
+        }, 1000);
+    });
+    $(".mencat2").click(function() {
+        $(".cat").removeClass("catout");
+        $('html, body').animate({
+            scrollTop: $("#swshirts").offset().top - 60
+        }, 1000);
+    });
+    $(".mencat3").click(function() {
+        $(".cat").removeClass("catout");
+        $('html, body').animate({
+            scrollTop: $("#tshirts").offset().top - 60
+        }, 1000);
+    });
+    $(".mencat4").click(function() {
+        $(".cat").removeClass("catout");
+        $('html, body').animate({
+            scrollTop: $("#shoes").offset().top - 60
+        }, 1000);
     });
 });
