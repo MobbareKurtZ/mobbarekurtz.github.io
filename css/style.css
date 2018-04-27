@@ -204,467 +204,503 @@ button {
 
 /*--------INDEX--------*/
 
-#wrapper_in {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 400px;
-    grid-template-areas: 
-    "in1"
-    "in2"
-    "in3"
-}
+    #wrapper_in {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 400px;
+        grid-template-areas: 
+        "in1"
+        "in2"
+        "fot"
+    }
 
-#insec1 {
-    grid-area: in1;
-    height: 100vh;
-    width: 100%;
-}
+    #insec1 {
+        grid-area: in1;
+        height: 100vh;
+        width: 100%;
+    }
 
-#index_main {
-    height: 60%;
-    background: black;
-    color: white;
-    margin: 30px 60px 60px 60px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: grid;
-    grid-template-columns: repeat(6, 16.7%);
-    grid-template-rows: 70px repeat(6, 1fr);
-    grid-template-areas:
-    "trd tit tit tit tit tit"
-    "sld sld sld sld sld sld"
-    "sld sld sld sld sld sld"
-    "sld sld sld sld sld sld"
-    "sld sld sld sld sld sld"
-    "sld sld sld sld sld sld"
-    "sld sld sld sld sld sld"
-}
+    #index_main {
+        height: 60%;
+        background: black;
+        color: white;
+        margin: 30px 60px 60px 60px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: grid;
+        grid-template-columns: repeat(6, 16.7%);
+        grid-template-rows: 70px repeat(6, 1fr);
+        grid-template-areas:
+        "trd tit tit tit tit tit"
+        "sld sld sld sld sld sld"
+        "sld sld sld sld sld sld"
+        "sld sld sld sld sld sld"
+        "sld sld sld sld sld sld"
+        "sld sld sld sld sld sld"
+        "sld sld sld sld sld sld"
+    }
 
-.mn_title {
-    grid-area: tit;
-    z-index: 10;
-    width: 100px;
-    height: 60px;
-    margin: auto;
-    top: 20px;
-}
+    .mn_title {
+        grid-area: tit;
+        z-index: 10;
+        width: 100px;
+        height: 60px;
+        margin: auto;
+        top: 20px;
+    }
 
-.trending {
-    grid-area: trd;
-    background-color: white;
-    margin: 10px;
-    height: 110px;
-    width: 25px;
-    z-index: 5;
-    left: 10px;
-    position: relative;
-}
+    .trending {
+        grid-area: trd;
+        background-color: white;
+        margin: 10px;
+        height: 110px;
+        width: 25px;
+        z-index: 5;
+        left: 10px;
+        position: relative;
+    }
 
-.trending h3 {
-    transform: rotate(270deg);
-    color: black;
-    bottom: -60px;
-    position: relative;
-    text-decoration: line-through;
-}
+    .trending h3 {
+        transform: rotate(270deg);
+        color: black;
+        bottom: -60px;
+        position: relative;
+        text-decoration: line-through;
+    }
 
-.mn_slideshow {
-    grid-area: sld;
-    background: transparent;
-    margin: 0px 40px 40px 40px;
-}
+    .mn_slideshow {
+        grid-area: sld;
+        background: transparent;
+        margin: 0px 40px 40px 40px;
+    }
 
-.mn_box {
-    background-color: white;
-    position: absolute;
-    height: 70px;
-    width: 50px;
-    bottom: 50px;
-    right: 10px;
-    margin: 5px;
-    color: black;
-    text-align: center;
-}
+    .mn_box {
+        background-color: white;
+        position: absolute;
+        height: 70px;
+        width: 50px;
+        bottom: 50px;
+        right: 10px;
+        margin: 5px;
+        color: black;
+        text-align: center;
+    }
 
-.mn_box h1 {
-    color: black;
-    position: relative;
-    top: -30px;
-    transform: rotate(270deg);
-    bottom: 23px;
-    font-size: 2.5em;
-}
+    .mn_box h1 {
+        color: black;
+        position: relative;
+        top: -30px;
+        transform: rotate(270deg);
+        bottom: 23px;
+        font-size: 2.5em;
+    }
 
-#insec2 {
-    grid-area: in2;
-    height: 100vh!important;
-    display: flex;
-    flex-direction: column;
-}
+    #insec2 {
+        grid-area: in2;
+        height: 100vh!important;
+        display: flex;
+        flex-direction: column;
+    }
 
-#insec2 a div {
-    background-color: black;
-    color: white;
-    mix-blend-mode: multiply;
-    height: 40px;
-    width: 160px;
-    margin: auto;
-}
+    #insec2 a div {
+        background-color: black;
+        color: white;
+        mix-blend-mode: multiply;
+        height: 40px;
+        width: 160px;
+        margin: auto;
+    }
 
-#insec2 a h1 {
-    position: relative;
-    top: -13px;
-}
+    #insec2 a h1 {
+        position: relative;
+        top: -13px;
+    }
 
-.men {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-image: url('../img/men.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .men {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-image: url('../img/men.jpg');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.women {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-image: url('../img/women.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .women {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-image: url('../img/women.jpg');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.insp {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-image: url('../img/wall3.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .insp {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-image: url('../img/wall3.jpg');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-#infooter {
-    height: 100%;
-    width: 100%;
-    grid-area: in3;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    text-align: center;
-}
+    #footer {
+        height: 400px;
+        width: 100vw;
+        grid-area: fot;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+    }
 
-.texts {
-    margin-top: 100px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
+    .texts {
+        margin-top: 100px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
 
-.about {
-    height: 100%;
-    width: 100%;
-}
+    .about {
+        height: 100%;
+        width: 100%;
+    }
 
-.support {
-    height: 100%;
-    width: 100%;
-}
+    .support {
+        height: 100%;
+        width: 100%;
+    }
 
-.aboutlist {
-    list-style: none;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 50%;
-}
+    .aboutlist {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%;
+    }
 
-.supportlist {
-    list-style: none;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 50%;
-}
+    .supportlist {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%;
+    }
 
-.sub {
-    margin-bottom: 30px;
-}
+    .sub {
+        margin-bottom: 30px;
+    }
 
-.sub h4 {
-    font-family: 'Nunito Sans', sans-serif;
-}
+    .sub h4 {
+        font-family: 'Nunito Sans', sans-serif;
+    }
 
-#submail {
-    background: transparent;
-    border: none;
-    outline: none;
-    text-align: center;
-    color: white;
-    border-bottom: solid white 2px;
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
-}
+    #submail {
+        background: transparent;
+        border: none;
+        outline: none;
+        text-align: center;
+        color: white;
+        border-bottom: solid white 2px;
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+    }
 
-#subbtn {
-    display: block;
-    margin: auto;
-    margin-top: 5px;
-    padding: 0;
-    border: none;
-    background: none;
-    color: white;
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
-}
+    #subbtn {
+        display: block;
+        margin: auto;
+        margin-top: 5px;
+        padding: 0;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+    }
 
-.gradol {
-    position: absolute;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 1) 100%);
-    width: 100%;
-    height: 400px;
-    z-index: -1;
-}
+    .gradol {
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 1) 100%);
+        width: 100%;
+        height: 400px;
+        z-index: -1;
+    }
 
 /*--------MEN--------*/
 
-.navwhite {
-    width: 100vw;
-}
+    .navwhite {
+        width: 100vw;
+    }
 
-#wrapper_men {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 1fr 400px;
-    grid-template-areas: 
-    "in1 in1 in1 in1 in1"
-    "in2 in2 in2 in2 in2"
-    "in3 in3 in3 in3 in3"
-}
+    #wrapper_men {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "men1"
+        "men2"
+        "men3"
+        "men4"
+        "men5"
+        "fot"
+    }
 
-#mensec1 {
-    grid-area: in1;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-}
+    #mensec1 {
+        grid-area: men1;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
 
-.altbtn {
-    flex-direction: row;
-    display: flex;
-    background-image: url('../img/wall.jpg');
-    background-size: 100%;
-    z-index: 20;
-}
+    .altbtn {
+        flex-direction: row;
+        display: flex;
+        background-image: url('../img/wall.jpg');
+        background-size: 100%;
+        z-index: 20;
+    }
 
-.altbtn h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 1000;
-}
+    .altbtn h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 1000;
+    }
 
-.colbtn, .catbtn {
-    display: block;
-    width: 100%;
-    color: white;
-    border: none;
-    margin: 20px;
-    height: 40px;
-    width: 140px;
-    outline: 0;
-    background-color: black;
-}
+    .colbtn, .catbtn {
+        display: block;
+        width: 100%;
+        color: white;
+        border: none;
+        margin: 20px;
+        height: 40px;
+        width: 140px;
+        outline: 0;
+        background-color: black;
+    }
 
-.altbtnsmall {
-    width: 140px;
-    height: 60px;
-    position: fixed;
-    top: -20px;
-    transition: 0.3s ease-in-out all;
-    opacity: 0;
-}
+    .altbtnsmall {
+        width: 140px;
+        height: 60px;
+        position: fixed;
+        top: -20px;
+        transition: 0.3s ease-in-out all;
+        opacity: 0;
+    }
 
-.altbtnsmall.colbtn {
-    right: 0px;
-}
+    .altbtnsmall.colbtn {
+        right: 0px;
+    }
 
-.altbtndown {
-    width: 60px;
-    border-radius: 30px;
-    top: 50px;
-    transition: 0.3s ease-in-out all;
-    opacity: 1;
-    
-}
+    .altbtndown {
+        width: 60px;
+        border-radius: 30px;
+        top: 50px;
+        transition: 0.3s ease-in-out all;
+        opacity: 1;
+        
+    }
 
-.altbtn i {
-    position: relative;
-    left: 13px;
-}
+    .altbtn i {
+        position: relative;
+        left: 12px;
+    }
 
-.catout{ 
-    left: 0px!important;
-    transition: 0.5s ease-in-out all;
-}
+    .catout{ 
+        left: 0px!important;
+        transition: 0.5s ease-in-out all;
+    }
 
-.cat {
-    position: fixed;
-    width: 100vw;
-    height: 100%;
-    background-color: white;
-    z-index: 10;
-    left: -100vw;
-    transition: 0.5s ease-in-out all;
-    text-align: center;
-}
+    .colout{ 
+        right: 0px!important;
+        transition: 0.5s ease-in-out all;
+    }
 
-.cat h2{
-    margin-top: 20px;
-}
+    .cat {
+        position: fixed;
+        width: 100vw;
+        height: 100%;
+        background-color: white;
+        z-index: 10;
+        left: -100vw;
+        transition: 0.5s ease-in-out all;
+        text-align: center;
+    }
 
-.cat ul {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    list-style: none;
-    padding: 0px;
-    justify-content: center;
-}
+    .col {
+        position: fixed;
+        width: 100vw;
+        height: 100%;
+        background-color: white;
+        z-index: 10;
+        right: -100vw;
+        transition: 0.5s ease-in-out all;
+        text-align: center;
+    }
 
-.cat li {
-    display: block;
-    width: 40vw;
-    height: 50vw;
-    margin: 10px;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-}
+    .cat h2, .col h2{
+        margin-top: 20px;
+    }
 
-.cat button {
-    height: 30px;
-    width: 100px;
-    outline: 0;
-    background-color: transparent;
-    border: none;
-    padding: 0px;
-    background-color: white;
-    color: black;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+    .cat ul, .col ul {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        list-style: none;
+        padding: 0px;
+        justify-content: center;
+    }
 
-.cat h3 {
-    margin-top: 4px;
-}
+    .cat li, .col li {
+        display: block;
+        width: 40vw;
+        height: 50vw;
+        margin: 10px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+    }
 
-.mencat1 {
-    background-image: url("../img/shirt.jpg");
-}
-.mencat2 {
-    background-image: url("../img/shirt.jpg");
-}
-.mencat3 {
-    background-image: url("../img/shirt.jpg");
-}
-.mencat4 {
-    background-image: url("../img/shirt.jpg");
-}
+    .cat button, .col button {
+        height: 30px;
+        width: 100px;
+        outline: 0;
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        background-color: white;
+        color: black;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-.productlist {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    list-style: none;
-    padding: 0px;
-    justify-content: center;
-    transition: 0.2s ease-in-out all;
-}
+    .cat h3, .col h3 {
+        margin-top: 4px;
+        font-size: 20px;
+    }
 
-.productlist li {
-    margin-bottom: 30px;
-    min-width: 45vw;
-}
+    .mencat1 {
+        background-image: url("../img/shirt.jpg");
+    }
+    .mencat2 {
+        background-image: url("../img/shirt.jpg");
+    }
+    .mencat3 {
+        background-image: url("../img/shirt.jpg");
+    }
+    .mencat4 {
+        background-image: url("../img/shirt.jpg");
+    }
 
-.productlist li > div {
-    padding-top: 120%;
-    margin: 10px;
-    display: block;
-    position: relative;
-}
+    .productlist {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        list-style: none;
+        padding: 0px;
+        justify-content: center;
+        transition: 0.2s ease-in-out all;
+    }
 
-.producttxt {
-    bottom: 10px;
-    right: 10px;
-    text-align: center;
-}
+    .productlist li {
+        margin-bottom: 30px;
+        min-width: 45vw;
+    }
 
-.producttxt h4 {
-    font-family: 'Montserrat', sans-serif;
-}
+    .productlist li > div {
+        padding-top: 120%;
+        margin: 10px;
+        display: block;
+        position: relative;
+    }
 
-.producttxt h3,h4 {
-    margin: 0px;
-}
+    .producttxt {
+        bottom: 10px;
+        right: 10px;
+        text-align: center;
+    }
 
-.mp1{
-    background-image: url("../img/shirt.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .producttxt h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
 
-.mp2{
-    background-image: url("../img/shirt.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .producttxt h3,h4 {
+        margin: 0px;
+    }
 
-.mp3{
-    background-image: url("../img/shirt.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .mp1{
+        background-image: url("../img/shirt.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-.mp4{
-    background-image: url("../img/shirt.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .mp2{
+        background-image: url("../img/shirt.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-.mp5{
-    background-image: url("../img/shirt.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .mp3{
+        background-image: url("../img/shirt.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-.mp6{
-    background-image: url("../img/shirt.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    .mp4{
+        background-image: url("../img/shirt.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .mp5{
+        background-image: url("../img/shirt.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .mp6{
+        background-image: url("../img/shirt.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /*----CATEGORIES----*/
+        #jackets {
+            grid-area: men2;
+        }
+
+        #swshirts {
+            grid-area: men3;
+        }
+
+        #tshirts {
+            grid-area: men4;
+        }
+
+        #shoes {
+            grid-area: men5;
+        }
 
 .material-icons {
     font-family: 'Material Icons';

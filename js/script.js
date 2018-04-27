@@ -101,4 +101,7 @@ $(document).ready(function () {
     $(".catbtn").click(function () {
         $(".cat").toggleClass("catout");
     });
+    $(".colbtn").click(function () {
+        $(".col").toggleClass("colout");
+    });
 });
