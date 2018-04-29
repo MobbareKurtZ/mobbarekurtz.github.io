@@ -25,7 +25,7 @@ $(document).ready(function () {
     });
 
     //  NAVBAR SCROLL WIDTH
-    if ($("#wrapper_in").length) {
+    /*if ($("#wrapper_in").length) {
         $(function () {
             $(window).scroll(function () {
                 var vw = $(window).width();
@@ -34,6 +34,17 @@ $(document).ready(function () {
                 var newSize = scrollPos * (vw / (pos - 60));
                 $(".navfiller").width(newSize);
             });
+        });
+    };*/
+    if ($("#wrapper_in").length) {
+        $(window).scroll(function (event) {
+            var scrollPos = $(this).scrollTop();
+            if ($("#insec2").offset().top - 60 < scrollPos) {
+                $(".navfiller").addClass("ulfull");
+            };
+            if ($("#insec2").offset().top - 60 > scrollPos) {
+                $(".navfiller").removeClass("ulfull");
+            };
         });
     };
 
@@ -88,6 +99,23 @@ $(document).ready(function () {
         $("#cartic").removeClass("animatebottom");
     });
 
+    //  ADD CART 
+    $(".addcart").click(function () {
+        $('.cart h4').hide();
+        var cp = $(".cartprod").length + 1
+        var wear = $(this).parent().siblings('.producttxt').children('h3').text();
+        var price = $(this).parent().siblings('.producttxt').children('h4').text();
+        var bg = $(this).parent().css('background-image');
+        var cart_elmt = `<div class="cartprod cp${cp}"> <div class="cpimg"></div><article class="cptxt"><h2>${wear}</h2><h3>${price}</h3></article><i class="material-icons md-36 md-light cpdel">close</i></div>`;
+        $('.cart').append(cart_elmt);
+        $('#cartic h3').text(cp);
+        $(`.cp${cp} .cpimg`).css('background-image', bg);
+    });
+
+    $('.cpdel').click(function () {
+        $(this).parent().hide();
+    });
+
     //  CATEGORIES
     $(window).scroll(function (event) {
         var scrollPos = $(this).scrollTop();
@@ -104,25 +132,25 @@ $(document).ready(function () {
     $(".closebtn").click(function () {
         $(".cat").removeClass("catout");
     });
-    $(".mencat1").click(function() {
+    $(".mencat1").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#jackets").offset().top - 60
         }, 1000);
     });
-    $(".mencat2").click(function() {
+    $(".mencat2").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#swshirts").offset().top - 60
         }, 1000);
     });
-    $(".mencat3").click(function() {
+    $(".mencat3").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#tshirts").offset().top - 60
         }, 1000);
     });
-    $(".mencat4").click(function() {
+    $(".mencat4").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#shoes").offset().top - 60

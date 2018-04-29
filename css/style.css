@@ -56,7 +56,8 @@ button {
     background-color: white;
     position: absolute;
     height: 100%;
-    transition: 0.2s ease all;
+    width: 0vw;
+    transition: 0.2s ease-in-out all;
 }
 
 .cartfill {
@@ -124,6 +125,15 @@ button {
     top: 11px;
 }
 
+#cartic h3 {
+    z-index: 10;
+    position: absolute;
+    top: -12px;
+    left: 14px;
+    color: black;
+    font-size: 15px;
+}
+
 #cross {
     position: absolute;
     top: -30px;
@@ -179,6 +189,8 @@ button {
     margin-top: 60px;
     right: -70vw;
     transition: 0.5s ease-in-out all;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart h4 {
@@ -469,8 +481,6 @@ button {
     }
 
     .altbtn {
-        background-image: url('../img/wall.jpg');
-        background-size: cover;
         text-align: center;
         z-index: 10;
         height: 200px;
@@ -627,8 +637,9 @@ button {
     }
 
     .productlist li {
-        margin-bottom: 30px;
+        padding-bottom: 30px;
         min-width: 45vw;
+        background-color: white;
     }
 
     .productlist li > div {
@@ -652,51 +663,94 @@ button {
         margin: 0px;
     }
 
+    .addcart {
+        background-color: white;
+        border-radius: 30px;
+        padding: 5px;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
+
     .mp1{
-        background-image: url("../img/shirt.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .mp2{
-        background-image: url("../img/shirt.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .mp3{
-        background-image: url("../img/shirt.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .mp4{
-        background-image: url("../img/shirt.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .mp5{
-        background-image: url("../img/shirt.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
     .mp6{
-        background-image: url("../img/shirt.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
-    #wrapper_men #footer {
+    .menbg {
         background-image: url('../img/wall.jpg');
         background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        bottom: 0px;
+        z-index: -10;
+    }
+
+    .cartprod {
+        background-color: black;
+        height: 80px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    
+    .cpimg {
+        height: 100%;
+        width: 30%;
+        background-size: 250%;
+        background-position: center;
+    }
+
+    .cptxt {
+        margin: 5px;
+    }
+
+    .cptxt h2, .cptxt h3 {
+        margin: 5px;
+    }
+
+    .cpdel {
+        position: absolute;
+        right: 5px;
+        top: 20px;
+    }
+
+    .cp1 .cpimg {
+        background-image: url("../img/jacket.jpg");
     }
 
     /*----CATEGORIES----*/
@@ -708,12 +762,23 @@ button {
             background-image: url("../img/jacket.jpg");
         }
 
+        #jackets li > div, .mp1, .mp4 {
+            background-image: url("../img/jacket.jpg");
+        }
+
         #swshirts {
             grid-area: men3;
         }
 
         #swshirts .intro {
             background-image: url("../img/swshirt.jpg");
+        }
+
+        #swshirts li > div, #mensec1 .mp2, #mensec1 .mp6 {
+            background-image: url("../img/swshirt.jpg");
+            background-size: 300%;
+            background-position-x: -200px;
+            background-position-y: -120px;
         }
 
         #tshirts {
@@ -724,6 +789,10 @@ button {
             background-image: url("../img/tshirt.jpg");
         }
 
+        #tshirts li > div, .mp5 {
+            background-image: url("../img/tshirt.jpg")
+        }
+
         #shoes {
             grid-area: men5;
         }
@@ -732,10 +801,13 @@ button {
             background-image: url("../img/shoes.jpg");
         }
 
+        #shoes li > div, .mp3 {
+            background-image: url("../img/shoes.jpg")
+        }
+
         .intro {
             width: 100vw;
             height: 200px;
-            background-color: red;
             text-align: center;
             background-size: cover;
             background-position: center;
@@ -791,6 +863,10 @@ button {
 
 .material-icons.md-24 {
     font-size: 24px;
+}
+
+.material-icons.md-30 {
+    font-size: 30px;
 }
 
 .material-icons.md-36 {
