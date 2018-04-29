@@ -184,6 +184,7 @@ button {
     position: fixed;
     height: 100%;
     width: 70vw;
+    height: 100vh;
     background: white;
     z-index: 90;
     margin-top: 60px;
@@ -637,14 +638,15 @@ button {
     }
 
     .productlist li {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         min-width: 45vw;
+        margin: 5px;
         background-color: white;
     }
 
     .productlist li > div {
         padding-top: 120%;
-        margin: 10px;
+        margin-bottom: 10px;
         display: block;
         position: relative;
     }
@@ -821,6 +823,71 @@ button {
             margin: auto;
             width: 200px;
         }
+
+/*--------PLAGG---------*/
+    #wrapper_plg {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "plg1"
+        "fot"
+    }
+
+    #plagg {
+        grid-area: plg1;
+        height: 100vh;
+    }
+    
+    .prodimg {
+        height: 40vh;
+        width: 100vw;
+        margin-top: 60px;
+    }
+
+    .prodtitle {
+        margin: 15px;
+        font-size: 2.5em;
+    }
+
+    .prodprice {
+        margin: 20px;
+        font-size: 1.5em;
+    }
+
+    .prodtxt {
+        margin: 20px;
+    }
+
+    .nextimg {
+        background-color: white;
+        border-radius: 30px;
+        padding: 5px;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .previmg {
+        background-color: white;
+        border-radius: 30px;
+        padding: 5px;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .addprod {
+        background-color: black;
+        border-radius: 30px;
+        padding: 10px;
+        position: absolute;
+        right: 20px;
+    }
 
 .material-icons {
     font-family: 'Material Icons';

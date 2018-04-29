@@ -12,3 +12,21 @@ $(function () {
         transition: 'flash2'
     });
 });
+
+$(function () {
+    $(".prodimg").vegas({
+        slides: [
+            { src: "img/jacket.jpg"},
+            { src: "img/tshirt.jpg"},
+            { src: "img/swshirt.jpg"},
+        ],
+        transitionDuration: 500,
+        autoplay: false,
+    });
+    $('.nextimg').click(function(){
+        $(".prodimg").vegas('options', 'transition', 'slideLeft').vegas('next');
+    });
+    $('.previmg').click(function(){
+        $(".prodimg").vegas('options', 'transition', 'slideRight').vegas('previous');
+    });
+});

@@ -73,8 +73,6 @@ $(document).ready(function () {
     });
 
     //  CART
-    var vh = $(window).height();
-    $(".cart").height(vh - 60);
     $("#cartic").click(function () {
         if ($('.nav').hasClass('navdown')) {
             $('.hamburger').removeClass('is-active');
@@ -103,8 +101,8 @@ $(document).ready(function () {
     $(".addcart").click(function () {
         $('.cart h4').hide();
         var cp = $(".cartprod").length + 1
-        var wear = $(this).parent().siblings('.producttxt').children('h3').text();
-        var price = $(this).parent().siblings('.producttxt').children('h4').text();
+        var wear = $(this).parent().siblings('a').children('.producttxt').children('h3').text();
+        var price = $(this).parent().siblings('a').children('.producttxt').children('h4').text();
         var bg = $(this).parent().css('background-image');
         var cart_elmt = `<div class="cartprod cp${cp}"> <div class="cpimg"></div><article class="cptxt"><h2>${wear}</h2><h3>${price}</h3></article><i class="material-icons md-36 md-light cpdel">close</i></div>`;
         $('.cart').append(cart_elmt);
@@ -117,6 +115,7 @@ $(document).ready(function () {
         var cp = $(".cartprod").length + 1
         if (cp == 1) {
             $('#cartic h3').text('');
+            $('.cart h4').show();
         } else {
             $('#cartic h3').text(cp - 1);
         };
