@@ -112,8 +112,14 @@ $(document).ready(function () {
         $(`.cp${cp} .cpimg`).css('background-image', bg);
     });
 
-    $('.cpdel').click(function () {
-        $(this).parent().hide();
+    $('.cart').on('click', '.cpdel', function () {
+        $(this).parent().remove();
+        var cp = $(".cartprod").length + 1
+        if (cp == 1) {
+            $('#cartic h3').text('');
+        } else {
+            $('#cartic h3').text(cp - 1);
+        };
     });
 
     //  CATEGORIES
