@@ -21,6 +21,7 @@ $(function () {
             { src: "img/swshirt.jpg"},
         ],
         autoplay: false,
+        transitionDuration: 600,
     });
     $('.nextimg').click(function(){
         $(".prodimg").vegas('options', 'transition', 'slideLeft2').vegas('next');

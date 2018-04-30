@@ -896,6 +896,7 @@ button {
         grid-area: plg2;
         height: 30vh;
         width: 100vw;
+        z-index: 1;
     }
 
     .simprod h2 {
@@ -911,7 +912,7 @@ button {
 
     .simprod ul {
         white-space: nowrap;
-        width: 100vw;
+        width: 90vw;
         padding: 50px 20px 0px 20px;
         justify-content: center;
         transition: 0.2s ease-in-out all;
@@ -925,6 +926,7 @@ button {
         min-width: 45vw;
         margin: 5px;
         background-color: white;
+        position: relative;
     }
 
     .simprod li > div {
@@ -940,6 +942,11 @@ button {
 
     .sptxt h4, .sptxt h3 {
         margin: 0px;
+    }
+
+    .simprod .addprod {
+        bottom: 5px;
+        right: 5px;
     }
 
     .sp1 {

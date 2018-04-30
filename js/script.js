@@ -110,6 +110,16 @@ $(document).ready(function () {
         $(`.cp${cp} .cpimg`).css('background-image', bg);
     });
 
+    $('.addprod').click(function(){
+        $('.cart h4').hide();
+        var cp = $(".cartprod").length + 1
+        var bg = "url('img/jacket.jpg')"
+        var cart_elmt = `<div class="cartprod cp${cp}"> <div class="cpimg"></div><article class="cptxt"><h2>Product</h2><h3>$1337</h3></article><i class="material-icons md-36 md-light cpdel">close</i></div>`;
+        $('.cart').append(cart_elmt);
+        $('#cartic h3').text(cp);
+        $(`.cp${cp} .cpimg`).css('background-image', bg);
+    });
+
     $('.cart').on('click', '.cpdel', function () {
         $(this).parent().remove();
         var cp = $(".cartprod").length + 1
