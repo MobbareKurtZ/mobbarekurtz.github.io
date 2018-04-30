@@ -827,18 +827,21 @@ button {
 /*--------PLAGG---------*/
     #wrapper_plg {
         display: grid;
+        overflow: hidden;
         width: 100%;
         height: 100%;
         margin: 0px;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "plg1"
+        "plg2"
         "fot"
     }
 
     #plagg {
         grid-area: plg1;
         height: 100vh;
+        background-color: white;
     }
     
     .prodimg {
@@ -887,6 +890,86 @@ button {
         padding: 10px;
         position: absolute;
         right: 20px;
+    }
+
+    .simprod {
+        grid-area: plg2;
+        height: 30vh;
+        width: 100vw;
+    }
+
+    .simprod h2 {
+        position: absolute;
+        padding: 10px 0px;
+        background-color: black;
+        color: white;
+        margin: 0px;
+        width: 100vw;
+        text-align: center;
+        mix-blend-mode: multiply;
+    }
+
+    .simprod ul {
+        white-space: nowrap;
+        width: 100vw;
+        padding: 50px 20px 0px 20px;
+        justify-content: center;
+        transition: 0.2s ease-in-out all;
+        list-style-type: none;
+        overflow-x: auto;
+    }
+
+    .simprod li {
+        display: inline-block;
+        padding-bottom: 20px;
+        min-width: 45vw;
+        margin: 5px;
+        background-color: white;
+    }
+
+    .simprod li > div {
+        background-size: cover;
+        background-position: center;
+        height: 100px;
+        width: 100%;
+    }
+
+    .sptxt {
+        margin: 10px;
+    }
+
+    .sptxt h4, .sptxt h3 {
+        margin: 0px;
+    }
+
+    .sp1 {
+        background-image: url("../img/shoes.jpg")
+    }
+
+    .sp2 {
+        background-image: url("../img/tshirt.jpg")
+    }
+
+    .sp3 {
+        background-image: url("../img/swshirt.jpg")
+    }
+
+    .sp4 {
+        background-image: url("../img/jacket.jpg")
+    }
+
+    .sp5 {
+        background-image: url("../img/shoes.jpg")
+    }
+
+    .plgbg {
+        background-size: cover;
+        background-position: center;
+        background-image: url("../img/wall.jpg");
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: -10;
     }
 
 .material-icons {

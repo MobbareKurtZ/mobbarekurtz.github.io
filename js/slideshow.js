@@ -20,13 +20,12 @@ $(function () {
             { src: "img/tshirt.jpg"},
             { src: "img/swshirt.jpg"},
         ],
-        transitionDuration: 500,
         autoplay: false,
     });
     $('.nextimg').click(function(){
-        $(".prodimg").vegas('options', 'transition', 'slideLeft').vegas('next');
+        $(".prodimg").vegas('options', 'transition', 'slideLeft2').vegas('next');
     });
     $('.previmg').click(function(){
-        $(".prodimg").vegas('options', 'transition', 'slideRight').vegas('previous');
+        $(".prodimg").vegas('options', 'transition', 'slideRight2').vegas('previous');
     });
 });
