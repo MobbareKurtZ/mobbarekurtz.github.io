@@ -259,11 +259,12 @@ button {
 
     .mn_title {
         grid-area: tit;
+        position: relative;
         z-index: 10;
         width: 100px;
         height: 60px;
         margin: auto;
-        top: 20px;
+        left: -15px;
     }
 
     .trending {
@@ -359,8 +360,9 @@ button {
         width: 100%;
         height: 100%;
         text-align: center;
-        background-image: url('../img/wall3.jpg');
-        background-size: cover;
+        background-image: url('../img/subway.jpg');
+        background-size: 150%;
+        background-position-x: center;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -453,13 +455,28 @@ button {
         z-index: 0;
     }
 
-/*--------MEN--------*/
+/*--------MEN/WOMEN--------*/
 
     .navwhite {
         width: 100vw;
     }
 
     #wrapper_men {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "men1"
+        "men2"
+        "men3"
+        "men4"
+        "men5"
+        "fot"
+    }
+
+    #wrapper_wmen {
         display: grid;
         width: 100%;
         height: 100%;
@@ -620,11 +637,31 @@ button {
     }
 
     .mencat3 {
-        background-image: url("../img/tshirt.jpg");
+        background-image: url("../img/wtshirt.jpg");
     }
 
     .mencat4 {
-        background-image: url("../img/shoes.jpg");
+        background-image: url("../img/wshoes.jpg");
+    }
+
+    .wmencat1 {
+        background-image: url("../img/wjacket.jpg");
+    }
+
+    .wmencat2 {
+        background-image: url("../img/wswshirt.jpg");
+    }
+
+    .wmencat2 div {
+        height: 60px;
+    }
+
+    .wmencat3 {
+        background-image: url("../img/wtshirt.jpg");
+    }
+
+    .wmencat4 {
+        background-image: url("../img/wshoes.jpg");
     }
 
     .productlist {
@@ -674,37 +711,37 @@ button {
         right: 5px;
     }
 
-    .mp1{
+    .mp1, .wp1{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
-    .mp2{
+    .mp2, .wp2{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
-    .mp3{
+    .mp3, .wp3{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
-    .mp4{
+    .mp4, .wp4{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
-    .mp5{
+    .mp5, .wp5{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
-    .mp6{
+    .mp6, .wp6{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -712,6 +749,16 @@ button {
 
     .menbg {
         background-image: url('../img/wall.jpg');
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        bottom: 0px;
+        z-index: -10;
+    }
+
+    .wmenbg {
+        background-image: url('../img/wall2.jpg');
         background-size: cover;
         width: 100vw;
         height: 100vh;
@@ -768,6 +815,14 @@ button {
             background-image: url("../img/jacket.jpg");
         }
 
+        #wrapper_wmen #jackets .intro {
+            background-image: url("../img/wjacket.jpg");
+        }
+
+        #wrapper_wmen #jackets li > div, .wp1, .wp4 {
+            background-image: url("../img/wjacket.jpg");
+        }
+
         #swshirts {
             grid-area: men3;
         }
@@ -778,6 +833,17 @@ button {
 
         #swshirts li > div, #mensec1 .mp2, #mensec1 .mp6 {
             background-image: url("../img/swshirt.jpg");
+            background-size: 300%;
+            background-position-x: -200px;
+            background-position-y: -120px;
+        }
+
+        #wrapper_wmen #swshirts .intro {
+            background-image: url("../img/wswshirt.jpg");
+        }
+
+        #wrapper_wmen #swshirts li > div, #mensec1 .wp2, #mensec1 .wp6 {
+            background-image: url("../img/wswshirt.jpg");
             background-size: 300%;
             background-position-x: -200px;
             background-position-y: -120px;
@@ -795,6 +861,14 @@ button {
             background-image: url("../img/tshirt.jpg")
         }
 
+        #wrapper_wmen #tshirts .intro {
+            background-image: url("../img/wtshirt.jpg");
+        }
+
+        #wrapper_wmen #tshirts li > div, .wp5 {
+            background-image: url("../img/wtshirt.jpg")
+        }
+
         #shoes {
             grid-area: men5;
         }
@@ -805,6 +879,14 @@ button {
 
         #shoes li > div, .mp3 {
             background-image: url("../img/shoes.jpg")
+        }
+
+        #wrapper_wmen #shoes .intro {
+            background-image: url("../img/wshoes.jpg");
+        }
+
+        #wrapper_wmen #shoes li > div, .wp3 {
+            background-image: url("../img/wshoes.jpg")
         }
 
         .intro {
@@ -841,6 +923,7 @@ button {
     #plagg {
         grid-area: plg1;
         height: 100vh;
+        min-height: 490px;
         background-color: white;
     }
     
@@ -895,19 +978,20 @@ button {
     .simprod {
         grid-area: plg2;
         height: 30vh;
+        min-height: 150px;
         width: 100vw;
         z-index: 1;
     }
 
     .simprod h2 {
+        background: black;
+        mix-blend-mode: multiply;
         position: absolute;
-        padding: 10px 0px;
-        background-color: black;
         color: white;
         margin: 0px;
+        padding: 10px 0px;
         width: 100vw;
         text-align: center;
-        mix-blend-mode: multiply;
     }
 
     .simprod ul {
@@ -972,7 +1056,7 @@ button {
     .plgbg {
         background-size: cover;
         background-position: center;
-        background-image: url("../img/wall.jpg");
+        background-image: url("../img/wall3.jpg");
         width: 100vw;
         height: 100vh;
         position: fixed;

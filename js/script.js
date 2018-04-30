@@ -147,25 +147,25 @@ $(document).ready(function () {
     $(".closebtn").click(function () {
         $(".cat").removeClass("catout");
     });
-    $(".mencat1").click(function () {
+    $(".mencat1, .wmencat1").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#jackets").offset().top - 60
         }, 1000);
     });
-    $(".mencat2").click(function () {
+    $(".mencat2, .wmencat2").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#swshirts").offset().top - 60
         }, 1000);
     });
-    $(".mencat3").click(function () {
+    $(".mencat3, .wmencat3").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#tshirts").offset().top - 60
         }, 1000);
     });
-    $(".mencat4").click(function () {
+    $(".mencat4, .wmencat4").click(function () {
         $(".cat").removeClass("catout");
         $('html, body').animate({
             scrollTop: $("#shoes").offset().top - 60
