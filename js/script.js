@@ -51,6 +51,7 @@ $(document).ready(function () {
     //  NAV MENU
     $('.hamburger').clickToggle(function () {
         var vw = $(window).width();
+        $('.overlay').addClass('olon');
         $('.hamburger').addClass('is-active');
         if ($("#wrapper_in").length) {
             $('.navfiller').addClass('ulfull');
@@ -64,6 +65,7 @@ $(document).ready(function () {
         }
     }, function () {
         $('.hamburger').removeClass('is-active');
+        $('.overlay').removeClass('olon');
         $('.nav').removeClass('navdown');
         if ($("#wrapper_in").length) {
             setTimeout(function () {
@@ -82,6 +84,7 @@ $(document).ready(function () {
             }, 400);
         };
         $('.cart').addClass('cartout');
+        $('.overlay').addClass('olon');
         if ($("#wrapper_in").length) {
             $('.cartfill').addClass('cartfiller');
         };
@@ -89,6 +92,7 @@ $(document).ready(function () {
         $("#cross").addClass("animatetop");
     });
     $("#cross").click(function () {
+        $('.overlay').removeClass('olon');
         $('.cart').removeClass('cartout');
         if ($("#wrapper_in").length) {
             $('.cartfill').removeClass('cartfiller');
