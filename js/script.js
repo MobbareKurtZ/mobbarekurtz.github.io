@@ -13,6 +13,8 @@
     };
 }(jQuery));
 
+
+
 $(document).ready(function () {
     //  TITLE GLITCH
     $('.glitch').glitch({
@@ -52,6 +54,16 @@ $(document).ready(function () {
     $('.hamburger').clickToggle(function () {
         var vw = $(window).width();
         $('.overlay').addClass('olon');
+        if ($('.cart').hasClass('cartout')) {
+            $('.overlay').removeClass('olon');
+            $('.cart').removeClass('cartout');
+            if ($("#wrapper_in").length) {
+                $('.cartfill').removeClass('cartfiller');
+            };
+            $("#cross").removeClass("animatetop");
+            $("#cartic").removeClass("animatebottom");
+        };
+        $('.cart').removeClass('cartout');
         $('.hamburger').addClass('is-active');
         if ($("#wrapper_in").length) {
             $('.navfiller').addClass('ulfull');
@@ -91,7 +103,7 @@ $(document).ready(function () {
         $("#cartic").addClass("animatebottom");
         $("#cross").addClass("animatetop");
     });
-    $("#cross").click(function () {
+    $("#cross, .overlay").click(function () {
         $('.overlay').removeClass('olon');
         $('.cart').removeClass('cartout');
         if ($("#wrapper_in").length) {
@@ -105,16 +117,16 @@ $(document).ready(function () {
     $(".addcart").click(function () {
         $('.cart h4').hide();
         var cp = $(".cartprod").length + 1
-        var wear = $(this).parent().siblings('a').children('.producttxt').children('h3').text();
-        var price = $(this).parent().siblings('a').children('.producttxt').children('h4').text();
-        var bg = $(this).parent().css('background-image');
+        var wear = $(this).siblings('h3').text();
+        var price = $(this).siblings('h4').text();
+        var bg = $(this).parent().siblings('a').css('background-image');
         var cart_elmt = `<div class="cartprod cp${cp}"> <div class="cpimg"></div><article class="cptxt"><h2>${wear}</h2><h3>${price}</h3></article><i class="material-icons md-36 md-light cpdel">close</i></div>`;
         $('.cart').append(cart_elmt);
         $('#cartic h3').text(cp);
         $(`.cp${cp} .cpimg`).css('background-image', bg);
     });
 
-    $('.addprod').click(function(){
+    $('.addprod').click(function () {
         $('.cart h4').hide();
         var cp = $(".cartprod").length + 1
         var bg = "url('img/jacket.jpg')"
