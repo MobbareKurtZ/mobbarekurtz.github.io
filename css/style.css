@@ -47,7 +47,8 @@ button {
     /*--------DIVERSE--------*/
 
         body {
-            font-size: 200%
+            font-size: 200%;
+            overflow-x: hidden;
         }
 
         #navbar {
@@ -231,10 +232,10 @@ button {
             position: fixed;
             height: 100%;
             width: 35vw;
-            height: 100vh;
+            height: 100%;
             background: white;
             z-index: 90;
-            margin-top: 90px;
+            padding-top: 90px;
             right: -35vw;
             transition: 0.5s ease-in-out all;
             overflow-y: scroll;
@@ -277,11 +278,13 @@ button {
             display: flex;
             flex-direction: row;
             z-index: 1;
-            font-size: 80%
+            font-size: 80%;
+            width: 70vw;
+            margin: auto;
         }
 
         .texts h3 {
-            margin: 0px;
+            margin: 20px;
         }
 
         .about {
@@ -318,6 +321,7 @@ button {
 
         .sub {
             z-index: 1;
+            margin-bottom: 60px;
         }
 
         .sub h4 {
@@ -344,8 +348,7 @@ button {
             display: block;
             margin: auto;
             position: relative;
-            bottom: 40px;
-            left: 290px;
+            left: 300px;
             padding: 0;
             border: none;
             background: none;
@@ -540,23 +543,26 @@ button {
         }
         
         #wrapper_in .gradol {
-            background: white;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 1) 100%)
+            , url('../img/sky.jpg');
+            background-size: cover;
+            background-position: center;
         }
         
         #wrapper_in #footer {
-            color: black;
+            color: white;
             position: fixed;
             bottom: 0px;
             z-index: 1;
         }
 
         #wrapper_in #submail {
-            color: black;
-            border-bottom: solid black 2px;
+            color: white;
+            border-bottom: solid white 2px;
         }
 
         #wrapper_in #subbtn {
-            color: black;
+            color: white;
         }
 
     /*--------MEN&WOMEN--------*/
@@ -612,7 +618,7 @@ button {
         .altbtn h2 {
             background-color: white;
             color: black;
-            width: 200px;
+            width: 300px;
             display: block;
             margin: auto;
             margin-top: 50px;
@@ -649,7 +655,12 @@ button {
         }
 
         .cat h2 {
-            display: none;
+            position: fixed;
+            top: 50vh;
+            left: -50px;
+            transform: rotate(90deg);
+            color: white;
+            margin: 0px;
         }
 
         .cat ul {
@@ -717,11 +728,11 @@ button {
         }
 
         .mencat3 {
-            background-image: url("../img/wtshirt.jpg");
+            background-image: url("../img/tshirt.jpg");
         }
 
         .mencat4 {
-            background-image: url("../img/wshoes.jpg");
+            background-image: url("../img/shoes.jpg");
         }
 
         .wmencat1 {
@@ -777,10 +788,11 @@ button {
         .producttxt {
             position: absolute;
             text-align: left;
-            bottom: 20px;
+            bottom: 0px;
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
+            padding-bottom: 10px;
         }
 
         .producttxt h4 {
@@ -801,6 +813,7 @@ button {
             padding: 10px;
             right: 0px;
             top: 15px;
+            user-select: none;
         }
 
         .menbg {
@@ -853,6 +866,8 @@ button {
             right: 5px;
             top: 20px;
             cursor: pointer;
+            user-select: none;
+            font-size: 48px!important;
         }
 
         /*----CATEGORIES----*/
@@ -959,6 +974,163 @@ button {
                 width: auto;
             }
 
+    /*--------PRODUCT---------*/
+        #wrapper_prd {
+            display: grid;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vw;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "prd1"
+            "prd2"
+            "fot"
+        }
+
+        #product {
+            grid-area: prd1;
+            height: 100vh;
+            margin: auto;
+            width: 60vw;
+            min-height: 490px;
+            background-color: white;
+        }
+        
+        .prodimg {
+            height: 40vh;
+            margin-top: 60px;
+        }
+
+        .prodtitle {
+            margin: 15px;
+            font-size: 2.5em;
+            position: relative
+        }
+
+        .prodprice {
+            margin: 20px;
+            font-size: 1.5em;
+        }
+
+        .prodtxt {
+            margin: 20px;
+        }
+
+        .nextimg {
+            background-color: white;
+            border-radius: 30px;
+            padding: 5px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .previmg {
+            background-color: white;
+            border-radius: 30px;
+            padding: 5px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .addprod {
+            background-color: black;
+            border-radius: 30px;
+            padding: 10px;
+            position: absolute;
+            right: 20px;
+            font-size: 50px!important;
+        }
+
+        .simprod {
+            grid-area: prd2;
+            margin: auto;
+            width: 60vw;
+            z-index: 1;
+        }
+
+        .simprod h2 {
+            background: black;
+            mix-blend-mode: multiply;
+            position: absolute;
+            color: white;
+            margin: 0px;
+            width: 60vw;
+            padding: 10px 0px;
+            text-align: center;
+        }
+
+        .simprod ul {
+            padding: 50px 20px 0px 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            transition: 0.2s ease-in-out all;
+            list-style-type: none;
+        }
+
+        .simprod li {
+            padding-bottom: 20px;
+            width: 15vw;
+            margin: 5px;
+            background-color: white;
+            position: relative;
+        }
+
+        .simprod li > div {
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            width: 100%;
+        }
+
+        .sptxt {
+            margin: 10px;
+        }
+
+        .sptxt h4, .sptxt h3 {
+            margin: 0px;
+        }
+
+        .simprod .addprod {
+            bottom: 5px;
+            right: 5px;
+        }
+
+        .sp1 {
+            background-image: url("../img/shoes.jpg")
+        }
+
+        .sp2 {
+            background-image: url("../img/tshirt.jpg")
+        }
+
+        .sp3 {
+            background-image: url("../img/swshirt.jpg")
+        }
+
+        .sp4 {
+            background-image: url("../img/jacket.jpg")
+        }
+
+        .sp5 {
+            background-image: url("../img/shoes.jpg")
+        }
+
+        .prodbg {
+            top: 0px;
+            background-size: cover;
+            background-position: center;
+            background-image: url("../img/sky.jpg");
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: -20;
+        }
 }
 
 /*--------MOBIL--------*/
