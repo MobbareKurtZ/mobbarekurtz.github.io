@@ -280,7 +280,7 @@ button {
             z-index: 1;
             font-size: 80%;
             width: 70vw;
-            margin: auto;
+            margin: auto auto 50px auto;
         }
 
         .texts h3 {
@@ -433,7 +433,7 @@ button {
             display: flex;
             align-self: center;
             justify-content: center;
-            height: 20vh;
+            height: 30vh;
         }
 
         .mn_title {
