@@ -979,7 +979,6 @@ button {
             display: grid;
             overflow: hidden;
             width: 100vw;
-            height: 100vw;
             grid-template-columns: 1fr;
             grid-template-areas: 
             "prd1"
@@ -1049,7 +1048,8 @@ button {
             grid-area: prd2;
             margin: auto;
             width: 60vw;
-            z-index: 1;
+            height: auto;
+            z-index: 10;
         }
 
         .simprod h2 {
@@ -1074,29 +1074,37 @@ button {
         }
 
         .simprod li {
-            padding-bottom: 20px;
-            width: 15vw;
+            width: 300px;
+            height: 250px;
             margin: 5px;
             background-color: white;
             position: relative;
         }
 
-        .simprod li > div {
+        .simprod li div {
+            position: absolute;
             background-size: cover;
             background-position: center;
-            height: 100px;
+            height: 250px;
             width: 100%;
         }
 
         .sptxt {
-            margin: 10px;
+            position: absolute;
+            bottom: 0px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            padding: 10px 0px;
         }
 
         .sptxt h4, .sptxt h3 {
             margin: 0px;
+            padding-left: 10px;
         }
 
         .simprod .addprod {
+            font-size: 38px!important;
             bottom: 5px;
             right: 5px;
         }
