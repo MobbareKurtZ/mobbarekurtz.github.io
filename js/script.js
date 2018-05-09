@@ -117,6 +117,7 @@ $(document).ready(function () {
 
     //  ADD CART 
     $(".addcart").click(function () {
+        $('.gtcheckout').addClass('checkactive');
         $('.cart h4').hide();
         var cp = $(".cartprod").length + 1
         var wear = $(this).siblings('h3').text();
@@ -129,6 +130,7 @@ $(document).ready(function () {
     });
 
     $('.addprod').click(function () {
+        $('.gtcheckout').addClass('checkactive');
         $('.cart h4').hide();
         var cp = $(".cartprod").length + 1
         var bg = "url('img/jacket.jpg')"
@@ -140,6 +142,9 @@ $(document).ready(function () {
 
     $('.cart').on('click', '.cpdel', function () {
         $(this).parent().remove();
+        if ($(".cartprod").length == false) {
+            $('.gtcheckout').removeClass('checkactive');
+        };
         var cp = $(".cartprod").length + 1
         if (cp == 1) {
             $('#cartic h3').text('');

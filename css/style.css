@@ -242,15 +242,36 @@ button {
         }
 
         .cart h4 {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            margin: 100px;
             text-align: center;
         }
 
         .cartout {
             right: 0px;
             transition: 0.5s ease-in-out all;
+        }
+
+        .gtcheckout {
+            position: absolute;
+            bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            width: 370px;
+            border-radius: 20px;
+            color: rgb(161, 161, 161);
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+
+        .gtcheckout h3 {
+            margin: 5px;
+            text-align: center;
+        }
+
+        .checkactive {
+            color: white;
+            background-color: rgb(15, 219, 100);
         }
 
         .paroller {
@@ -1042,6 +1063,8 @@ button {
             position: absolute;
             right: 20px;
             font-size: 50px!important;
+            user-select: none;
+            cursor: pointer;
         }
 
         .simprod {
