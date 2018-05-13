@@ -8,6 +8,8 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/vegas/vegas.min.css">
     <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Open+Sans|Poiret+One|Roboto|Varela" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -15,6 +17,7 @@
     <script src="js/jquery.scrollify.js"></script>
     <script src="js/vegas/vegastxtmod.min.js"></script>
     <script src="js/glitch.jquery.js"></script>
+    <script src="js/slick/slick.min.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/script.js"></script>
     <title>57YLE</title>
@@ -77,17 +80,31 @@
     </nav>
     <div class="cart">
         <h4>Your cart is empty</h4>
-        <footer class="gtcheckout">
-            <h3>GO TO CHECKOUT</h3>
-        </footer>
+        <section class="prods"></section>
+        <section class="ctinfo">
+            <a href="checkout.html">
+                <button type="submit" class="gtcheckout">
+                    <h4>CHECKOUT</h4>
+                </button>
+            </a>
+            <article class="subtotal">
+                <h5 class="sbt">SUBTOTAL</h5>
+                <h5 class="sbpr">$1337</h5>
+            </article>
+        </section>
     </div>
     <div class="overlay"></div>
     <div id="wrapper_prd">
         <div class="prodbg"></div>
         <main id="product">
-            <section class="prodimg">
+            <!--<section class="prodimg">
                 <i class="material-icons md-30 nextimg">arrow_right</i>
                 <i class="material-icons md-30 previmg">arrow_left</i>
+            </section>-->
+            <section class="prodimg">
+                <div class="prdimg1"></div>
+                <div class="prdimg2"></div>
+                <div class="prdimg3"></div>
             </section>
             <h2 class="prodtitle">PRODUCT
                 <i class="material-icons md-30 md-light addprod">add_shopping_cart</i>

@@ -17,6 +17,17 @@ $(document).ready(function () {
     var vh = $(window).height();
     $('.cart').height(vh - $("#navbar").height());
 
+    //  CHECKOUT
+    $(window).on("load resize", function (e) {
+        var stp1_pos = $(".stp1").offset().left;
+        var stp2_pos = $(".stp2").offset().left;
+        var w1 = stp2_pos - stp1_pos
+        $('.bar').css('left', stp1_pos + 1);
+        $('.nextchk').click(function () {
+            $('.bar').width(w1);
+        });
+    });
+
     $(".paroller").paroller({ factor: '-0.3', type: 'background', direction: 'vertical' });
     //  TITLE GLITCH
     $('.glitch').glitch({
@@ -115,43 +126,51 @@ $(document).ready(function () {
         $("#cartic").removeClass("animatebottom");
     });
 
+    var sbtot = 0
+
     //  ADD CART 
     $(".addcart").click(function () {
-        $('.gtcheckout').addClass('checkactive');
-        $('.cart h4').hide();
+        $('.ctinfo').show();
+        $('.cart > h4').hide();
         var cp = $(".cartprod").length + 1
         var wear = $(this).siblings('h3').text();
         var price = $(this).siblings('h4').text();
         var bg = $(this).parent().siblings('a').css('background-image');
         var cart_elmt = `<div class="cartprod cp${cp}"> <div class="cpimg"></div><article class="cptxt"><h2>${wear}</h2><h3>${price}</h3></article><i class="material-icons md-36 md-light cpdel">close</i></div>`;
-        $('.cart').append(cart_elmt);
+        $('.prods').append(cart_elmt);
         $('#cartic h3').text(cp);
         $(`.cp${cp} .cpimg`).css('background-image', bg);
+        sbtot += 1337
+        $('.sbpr').text("$" + sbtot);
     });
 
     $('.addprod').click(function () {
-        $('.gtcheckout').addClass('checkactive');
-        $('.cart h4').hide();
+        $('.ctinfo').show();
+        $('.cart > h4').hide();
         var cp = $(".cartprod").length + 1
         var bg = "url('img/jacket.jpg')"
         var cart_elmt = `<div class="cartprod cp${cp}"> <div class="cpimg"></div><article class="cptxt"><h2>Product</h2><h3>$1337</h3></article><i class="material-icons md-36 md-light cpdel">close</i></div>`;
-        $('.cart').append(cart_elmt);
+        $('.prods').append(cart_elmt);
         $('#cartic h3').text(cp);
         $(`.cp${cp} .cpimg`).css('background-image', bg);
+        sbtot += 1337
+        $('.sbpr').text("$" + sbtot);
     });
 
     $('.cart').on('click', '.cpdel', function () {
         $(this).parent().remove();
         if ($(".cartprod").length == false) {
-            $('.gtcheckout').removeClass('checkactive');
+            $('.ctinfo').hide();
         };
         var cp = $(".cartprod").length + 1
         if (cp == 1) {
             $('#cartic h3').text('');
-            $('.cart h4').show();
+            $('.cart > h4').show();
         } else {
             $('#cartic h3').text(cp - 1);
         };
+        sbtot -= 1337
+        $('.sbpr').text("$" + sbtot);
     });
 
     //  CATEGORIES
@@ -217,5 +236,8 @@ $(document).ready(function () {
                 scrollTop: $("#shoes").offset().top - 90
             }, 1000);
         };
+    });
+    $('.prodimg').slick({
+        dots: true
     });
 });

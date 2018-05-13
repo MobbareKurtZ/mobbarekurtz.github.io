@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="js/jquery.paroller.min.js"></script>
-    <script src="js/jquery.scrollify.js"></script>
     <script src="js/vegas/vegastxtmod.min.js"></script>
     <script src="js/glitch.jquery.js"></script>
     <script src="js/slideshow.js"></script>
@@ -22,7 +21,7 @@
 
 <body>
     <header id="navbar">
-        <div class="navfiller"></div>
+        <div class="navfiller navwhite"></div>
         <div class="cartfill"></div>
         <button class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
@@ -45,31 +44,31 @@
     </header>
     <nav class="nav">
         <ul>
-            <a href="men.html">
-                <li>
+            <li>
+                <a href="men.html">
                     <h4>MEN</h4>
-                </li>
-            </a>
-            <a href="women.html">
-                <li>
+                </a>
+            </li>
+            <li>
+                <a href="women.html">
                     <h4>WOMEN</h4>
-                </li>
-            </a>
-            <a href="#">
-                <li>
+                </a>
+            </li>
+            <li>
+                <a href="#">
                     <h4>INSPIRATION</h4>
-                </li>
-            </a>
-            <a href="contact.html">
-                <li>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
                     <h4>CONTACT</h4>
-                </li>
-            </a>
-            <a href="#">
-                <li>
+                </a>
+            </li>
+            <li>
+                <a href="#">
                     <h4>TEST</h4>
-                </li>
-            </a>
+                </a>
+            </li>
         </ul>
     </nav>
     <div class="cart">
@@ -88,46 +87,59 @@
         </section>
     </div>
     <div class="overlay"></div>
-    <div id="wrapper_in">
-        <div class="paroller"></div>
-        <section id="insec1">
-            <a href="product.html" id="index_main">
-                <div class="mainimg">
-                    <aside class="d_mn_box">
-                        <h1>57</h1>
-                    </aside>
+    <div id="wrapper_chk">
+        <main class="chk">
+            <div class="progress">
+                <div class="bar"></div>
+                <div class="stp1 step active">
+                    <h4>Delivery</h4>
                 </div>
-                <header class="mn_title">
-                    <h1 class="glitch title">TITLE1</h1>
-                </header>
-                <aside class="trending">
-                    <h3>TRENDING</h3>
-                </aside>
-                <section class="mn_slideshow"></section>
-                <aside class="mn_box">
-                    <h1>57</h1>
-                </aside>
-            </a>
-        </section>
-        <section id="insec2">
-            <a href="men.html" class="men">
-                <div>
-                    <h1>MEN</h1>
+                <div class="stp2 step">
+                    <h4>Payment</h4>
                 </div>
-            </a>
-            <a href="women.html" class="women">
-                <div>
-                    <h1>WOMEN</h1>
+                <div class="stp3 step">
+                    <h4>Finish</h4>
                 </div>
-            </a>
-            <a href="insp.html" class="insp">
-                <div>
-                    <h1>INSPIRATION</h1>
-                </div>
-            </a>
-        </section>
+            </div>
+            <section class="dlvr">
+                <form>
+                    <span>
+                        <label>FIRST NAME</label>
+                        <input type="text" name="fname" placeholder="First name">
+                    </span>
+                    <span>
+                        <label>LAST NAME</label>
+                        <input type="text" name="lname" placeholder="Last name">
+                    </span>
+                    <span>
+                        <label>ADRESS</label>
+                        <input type="text" name="adr" placeholder="Adress">
+                    </span>
+                    <span>
+                        <label>CITY</label>
+                        <input type="text" name="city" placeholder="City">
+                    </span>
+                    <span>
+                        <label>COUNTRY</label>
+                        <input type="text" name="cntry" placeholder="Country">
+                    </span>
+                    <span>
+                        <label>POSTAL CODE</label>
+                        <input type="text" name="pcode" placeholder="Postal code">
+                    </span>
+                    <span>
+                        <label>PHONE</label>
+                        <input type="tel" name="phone" placeholder="Phone">
+                    </span>
+                </form>
+                <button class="nextchk">NEXT</button>
+            </section>
+            <section class="pay"></section>
+            <section class="conf"></section>
+        </main>
         <footer id="footer">
             <div class="gradol"></div>
+            <div class="ctnftimg"></div>
             <article class="texts">
                 <section class="about">
                     <h3>ABOUT STYLE57</h3>

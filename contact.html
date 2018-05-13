@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Open+Sans|Poiret+One|Roboto|Varela" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
     <script src="js/vegas/vegastxtmod.min.js"></script>
     <script src="js/glitch.jquery.js"></script>
     <script src="js/slideshow.js"></script>
@@ -20,7 +21,7 @@
 
 <body>
     <header id="navbar">
-        <div class="navfiller"></div>
+        <div class="navfiller navwhite"></div>
         <div class="cartfill"></div>
         <button class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
@@ -72,6 +73,18 @@
     </nav>
     <div class="cart">
         <h4>Your cart is empty</h4>
+        <section class="prods"></section>
+        <section class="ctinfo">
+            <a href="checkout.html">
+                <button type="submit" class="gtcheckout">
+                    <h4>CHECKOUT</h4>
+                </button>
+            </a>
+            <article class="subtotal">
+                <h5 class="sbt">SUBTOTAL</h5>
+                <h5 class="sbpr">$1337</h5>
+            </article>
+        </section>
     </div>
     <div class="overlay"></div>
     <div id="wrapper_cnt">
@@ -81,13 +94,15 @@
                     <h2>CONTACT</h2>
                 </span>
             </div>
-            <h2>Email</h2>
-            <h3>contact@style.57</h3>
-            <p>Emails will be answered within 24 hours.</p>
-            <br>
-            <h2>Call Us</h2>
-            <h3>1337-420-123-69</h3>
-            <p>Open 9:00-20:00 every weekday.</p>
+            <article class="cntart">
+                <h2>Email</h2>
+                <h3>contact@style.57</h3>
+                <p>Emails will be answered within 24 hours.</p>
+                <br>
+                <h2>Call Us</h2>
+                <h3>1337-420-123-69</h3>
+                <p>Open 9:00-20:00 every weekday.</p>
+            </article>
         </main>
         <footer id="footer">
             <div class="gradol"></div>

@@ -44,7 +44,7 @@ button {
         .mn_box {
             display: none;
         }
-    /*--------DIVERSE--------*/
+    /*#region--------DIVERSE--------*/
 
         body {
             font-size: 200%;
@@ -161,19 +161,23 @@ button {
         #cartic {
             transition: 0.5s ease-in-out all;
             position: absolute;
-            top: 11px;
+            top: 20px;
             right: 20px;
-            font-size: 50px;
             cursor: pointer;
+        }
+
+        #cartic i {
+            font-size: 50px!important;
+            position: relative;
         }
 
         #cartic h3 {
             z-index: 10;
             color: black;
-            font-size: 15px;
+            font-size: 23px;
             margin: 0px;
-            top: 13px;
-            left: 14px;
+            left: 18px;
+            top: 3px;
             text-align: center;
             position: absolute;
         }
@@ -230,20 +234,63 @@ button {
 
         .cart {
             position: fixed;
+            color: white;
             height: 100%;
             width: 35vw;
             height: 100%;
-            background: white;
+            background: black;
             z-index: 90;
             padding-top: 90px;
             right: -35vw;
             transition: 0.5s ease-in-out all;
-            overflow-y: scroll;
         }
 
-        .cart h4 {
-            margin: 100px;
+        .prods {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .cartprod {
+            background-color: rgba(255, 255, 255, 0.2);
+            height: 140px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        
+        .cpimg {
+            height: 100%;
+            width: 30%;
+            background-size: 250%;
+            background-position: center;
+        }
+
+        .cptxt {
+            margin: 5px;
+        }
+
+        .cptxt h2, .cptxt h3 {
+            margin: 5px;
+        }
+
+        .cpdel {
+            position: absolute;
+            right: 5px;
+            top: 20px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 48px!important;
+        }
+
+        .cart > h4 {
+            margin: 0px auto;
             text-align: center;
+            position: absolute;
+            top: 50vh;
+            left: 0;
+            right: 0;
         }
 
         .cartout {
@@ -251,27 +298,58 @@ button {
             transition: 0.5s ease-in-out all;
         }
 
+        .ctinfo {
+            background-color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            bottom: 0px;
+            height: 200px;
+            width: 100%;
+            color: black;
+            display: none;
+            z-index: 10;
+        }
+
         .gtcheckout {
             position: absolute;
-            bottom: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
+            top: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 10px;
-            width: 370px;
-            border-radius: 20px;
-            color: rgb(161, 161, 161);
+            width: 250px;
+            color: white;
             margin: auto;
             left: 0;
             right: 0;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            outline: 0;
         }
 
-        .gtcheckout h3 {
-            margin: 5px;
+        .gtcheckout h4 {
+            padding: 0px;
             text-align: center;
         }
+        
+        .ctinfo h5 {
+            margin: 10px;
+            font-weight: 100;
+            font-family: 'Open Sans', sans-serif;
+        }
 
-        .checkactive {
-            color: white;
-            background-color: rgb(15, 219, 100);
+        .subtotal {
+            position: absolute;
+            bottom: 15px;
+            width: 70%;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .sbt {
+            float: left;
+        }
+        .sbpr {
+            float: right;
         }
 
         .paroller {
@@ -400,7 +478,10 @@ button {
             background-color: rgba(0, 0, 0, 0.5);
             pointer-events: inherit;
         }
-        /*--------INDEX--------*/
+
+        /*  #endregion */
+
+    /*#region--------INDEX--------*/
 
         #wrapper_in {
             display: grid;
@@ -586,7 +667,9 @@ button {
             color: white;
         }
 
-    /*--------MEN&WOMEN--------*/
+    /*  #endregion */
+    
+    /*#region--------MEN&WOMEN--------*/
         .navwhite {
             width: 100vw;
         }
@@ -857,40 +940,6 @@ button {
             z-index: -10;
         }
 
-        .cartprod {
-            background-color: black;
-            height: 140px;
-            color: white;
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 5px;
-            position: relative;
-        }
-        
-        .cpimg {
-            height: 100%;
-            width: 30%;
-            background-size: 250%;
-            background-position: center;
-        }
-
-        .cptxt {
-            margin: 5px;
-        }
-
-        .cptxt h2, .cptxt h3 {
-            margin: 5px;
-        }
-
-        .cpdel {
-            position: absolute;
-            right: 5px;
-            top: 20px;
-            cursor: pointer;
-            user-select: none;
-            font-size: 48px!important;
-        }
-
         /*----CATEGORIES----*/
             #jackets {
                 grid-area: men2;
@@ -995,7 +1044,9 @@ button {
                 width: auto;
             }
 
-    /*--------PRODUCT---------*/
+    /*  #endregion */
+            
+    /*#region--------PRODUCT--------*/
         #wrapper_prd {
             display: grid;
             overflow: hidden;
@@ -1009,7 +1060,7 @@ button {
 
         #product {
             grid-area: prd1;
-            height: 100vh;
+            min-height: 100vh;
             margin: auto;
             width: 60vw;
             min-height: 490px;
@@ -1017,19 +1068,41 @@ button {
         }
         
         .prodimg {
-            height: 40vh;
-            margin-top: 60px;
+            height: 50vh;
+            margin-top: 90px;
+            position: relative;
+        }
+
+        .prdimg1 {
+            background-image: url("../img/jacket.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .prdimg2 {
+            background-image: url("../img/tshirt.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .prdimg3 {
+            background-image: url("../img/shoes.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
         }
 
         .prodtitle {
             margin: 15px;
-            font-size: 2.5em;
+            font-size: 10vh;
             position: relative
         }
 
         .prodprice {
             margin: 20px;
-            font-size: 1.5em;
+            font-size: 7vh;
         }
 
         .prodtxt {
@@ -1044,6 +1117,7 @@ button {
             right: 5px;
             top: 50%;
             transform: translateY(-50%);
+            cursor: pointer;
         }
 
         .previmg {
@@ -1054,11 +1128,12 @@ button {
             left: 5px;
             top: 50%;
             transform: translateY(-50%);
+            cursor: pointer;
         }
 
         .addprod {
-            background-color: black;
-            border-radius: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
             padding: 10px;
             position: absolute;
             right: 20px;
@@ -1130,6 +1205,8 @@ button {
             font-size: 38px!important;
             bottom: 5px;
             right: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
         }
 
         .sp1 {
@@ -1162,10 +1239,153 @@ button {
             position: fixed;
             z-index: -20;
         }
+
+    /*  #endregion */
+    
+    /*#region--------CONTACT--------*/
+        #wrapper_cnt {
+            display: grid;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "cnt1"
+            "fot"
+        }
+
+        #cnt1 {
+            margin-top: 90px;
+            text-align: center;
+        }
+
+        .cntimg {
+            background-size: cover;
+            background-position: center;
+            background-image: url("../img/antenna.jpg");
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cntimg h2 {
+            padding: 6px;
+            margin: 0px;
+        }
+
+        .cntimg span {
+            background-color: black;
+            color: white;
+            mix-blend-mode: multiply;
+            margin: 0px;
+        }
+
+        .ctnftimg {
+            background-size: cover;
+            background-position: center;
+            background-image: url("../img/subway.jpg");
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            z-index: -1;
+        }
+    /*  #endregion */
+    
+    /*#region--------CHECKOUT--------*/
+        #wrapper_chk {
+            display: grid;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "chk"
+            "fot"
+        }
+
+        .chk {
+            padding-top: 90px;
+            grid-area: chk;
+            height: 100vh;
+        }
+        .progress {
+            position: relative;
+            width: 100vw;
+            margin: auto;
+            display: flex;
+            margin-bottom: 50px;
+            justify-content: center;
+        }
+
+        .bar {
+            top: 7px;
+            transition: 1s ease-in-out width;
+            width: 0px;
+            height: 10px;
+            position: absolute;
+            background-color: rgb(77, 195, 216)
+        }
+        
+        .step {
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin: 0px 10vw;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            background-color: rgb(165, 165, 165);
+        }
+
+        .step h4 {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            left: -20px;
+        }
+
+        .active {
+            background-color: rgb(77, 195, 216)
+        }
+        /*#region PAYMENT*/
+        .dlvr form {
+            width: 50vw;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .dlvr form input {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 10px;
+        }
+
+        .dlvr span {
+            position: relative;
+        }
+
+        .dlvr span label {
+            font-family: 'Open Sans', sans-serif;
+            position: absolute;
+            top: -15px;
+            left: 0px;
+            margin: 0px;
+            font-size: 16px;
+        }
+        /*  #endregion */
+        
+    /*  #endregion */
 }
 
 /*--------MOBIL--------*/
-
 @media only screen and (max-width: 600px) {
     /*--------HIDE--------*/
         .hdnvtxt1 {
@@ -1180,8 +1400,8 @@ button {
         .d_mn_box {
             display: none;
         }
-
-    /*--------DIVERSE--------*/
+        
+    /*#region--------DIVERSE--------*/
 
         #navbar {
             grid-area: nvb;
@@ -1461,7 +1681,9 @@ button {
             pointer-events: inherit;
         }
 
-    /*--------INDEX--------*/
+        /*  #endregion */
+        
+    /*#region--------INDEX--------*/
 
         #wrapper_in {
             display: grid;
@@ -1614,7 +1836,9 @@ button {
             justify-content: center;
         }
 
-    /*--------MEN/WOMEN--------*/
+    /*  #endregion */
+        
+    /*#region--------MEN&WOMEN--------*/
 
         .navwhite {
             width: 100vw;
@@ -2067,7 +2291,9 @@ button {
                 width: 200px;
             }
 
-    /*--------PRODUCT---------*/
+    /*  #endregion */
+    
+    /*#region--------PRODUCT--------*/
         #wrapper_prd {
             display: grid;
             overflow: hidden;
@@ -2224,7 +2450,9 @@ button {
             z-index: -10;
         }
 
-    /*--------CONTACT--------*/
+    /*  #endregion */
+    
+    /*#region--------CONTACT--------*/
         #wrapper_cnt {
             display: grid;
             overflow: hidden;
@@ -2275,6 +2503,7 @@ button {
             position: absolute;
             z-index: -1;
         }
+    /*  #endregion */
 }
 
 .material-icons {

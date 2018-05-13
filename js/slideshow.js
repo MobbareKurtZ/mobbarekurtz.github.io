@@ -12,7 +12,7 @@ $(function () {
         transition: 'flash2'
     });
 });
-
+/*
 $(function () {
     $(".prodimg").vegas({
         slides: [
@@ -29,4 +29,4 @@ $(function () {
     $('.previmg').click(function(){
         $(".prodimg").vegas('options', 'transition', 'slideRight2').vegas('previous');
     });
-});
+});*/
