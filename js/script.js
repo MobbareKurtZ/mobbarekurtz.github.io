@@ -18,15 +18,73 @@ $(document).ready(function () {
     $('.cart').height(vh - $("#navbar").height());
 
     //  CHECKOUT
-    $(window).on("load resize", function (e) {
+    if ($("#wrapper_chk").length) {
         var stp1_pos = $(".stp1").offset().left;
         var stp2_pos = $(".stp2").offset().left;
         var w1 = stp2_pos - stp1_pos
-        $('.bar').css('left', stp1_pos + 1);
-        $('.nextchk').click(function () {
-            $('.bar').width(w1);
+        $(window).on("load resize", function (e) {
+            stp1_pos = $(".stp1").offset().left;
+            stp2_pos = $(".stp2").offset().left;
+            w1 = stp2_pos - stp1_pos
+            $('.bar').css('left', stp1_pos + 1);
+            if ($('.pay').hasClass("view")) {
+                $('.bar').width(w1);
+            }
+            if ($('.conf').hasClass("view")) {
+                $('.bar').width(w1 * 2);
+            }
         });
-    });
+        $('.nextdlvr').click(pay);
+        $('.nextdlvr').click(function () {
+            setTimeout(function () {
+                $('.stp2').addClass("active");
+            }, 1000);
+        });
+        $('.prevpay').click(dlvr);
+        $('.prevpay').click(function () {
+
+        });
+        $('.nextpay').click(conf);
+        $('.nextpay').click(function () {
+        });
+        $('.prevconf').click(pay);
+        $('.prevconf').click(function () {
+            $('.stp3').removeClass("active");
+        });
+
+        function dlvr() {
+            $('.dlvr').addClass("view");
+            $('.dlvr').removeClass("stepl");
+            $('.pay').addClass("stepr");
+            $('.conf').addClass("stepr");
+            $('.bar').width(0);
+            $('.stp3').removeClass("active");
+            $('.stp2').removeClass("active");
+        }
+
+        function pay() {
+            $('.pay').addClass("view");
+            $('.conf').removeClass("view");
+            $('.pay').removeClass("stepr");
+            $('.pay').removeClass("stepl");
+            $('.dlvr').addClass("stepl");
+            $('.conf').addClass("stepr");
+            $('.bar').width(w1);
+        }
+
+        function conf() {
+            $('.pay').removeClass("view");
+            $('.conf').addClass("view");
+            $('.conf').removeClass("stepl, stepr");
+            $('.dlvr').addClass("stepl");
+            $('.pay').addClass("stepl");
+            $('.bar').width(w1 * 2);
+            setTimeout(function () {
+                $('.stp3').addClass("active");
+            }, 1000);
+        }
+
+    }
 
     $(".paroller").paroller({ factor: '-0.3', type: 'background', direction: 'vertical' });
     //  TITLE GLITCH

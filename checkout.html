@@ -88,54 +88,99 @@
     </div>
     <div class="overlay"></div>
     <div id="wrapper_chk">
-        <main class="chk">
-            <div class="progress">
-                <div class="bar"></div>
-                <div class="stp1 step active">
-                    <h4>Delivery</h4>
-                </div>
-                <div class="stp2 step">
-                    <h4>Payment</h4>
-                </div>
-                <div class="stp3 step">
-                    <h4>Finish</h4>
-                </div>
+        <div class="chkbg"></div>
+        <div class="progress">
+            <div class="bar"></div>
+            <div class="stp1 step active">
+                <h4>Delivery</h4>
             </div>
+            <div class="stp2 step">
+                <h4>Payment</h4>
+            </div>
+            <div class="stp3 step">
+                <h4>Finish</h4>
+            </div>
+        </div>
+        <main class="chk">
             <section class="dlvr">
                 <form>
-                    <span>
-                        <label>FIRST NAME</label>
-                        <input type="text" name="fname" placeholder="First name">
-                    </span>
-                    <span>
-                        <label>LAST NAME</label>
-                        <input type="text" name="lname" placeholder="Last name">
-                    </span>
+                    <div class="crow">
+                        <span>
+                            <label>FIRST NAME</label>
+                            <input type="text" name="firstname" placeholder="First name">
+                        </span>
+                        <span>
+                            <label>LAST NAME</label>
+                            <input type="text" name="lastname" placeholder="Last name">
+                        </span>
+                    </div>
                     <span>
                         <label>ADRESS</label>
-                        <input type="text" name="adr" placeholder="Adress">
+                        <input type="text" name="address" placeholder="Adress">
                     </span>
                     <span>
                         <label>CITY</label>
                         <input type="text" name="city" placeholder="City">
                     </span>
-                    <span>
-                        <label>COUNTRY</label>
-                        <input type="text" name="cntry" placeholder="Country">
-                    </span>
-                    <span>
-                        <label>POSTAL CODE</label>
-                        <input type="text" name="pcode" placeholder="Postal code">
-                    </span>
+                    <div class="crow">
+                        <span>
+                            <label>COUNTRY</label>
+                            <input type="text" name="country" placeholder="Country">
+                        </span>
+                        <span>
+                            <label>POSTAL CODE</label>
+                            <input type="text" name="postcode" placeholder="Postal code">
+                        </span>
+                    </div>
                     <span>
                         <label>PHONE</label>
                         <input type="tel" name="phone" placeholder="Phone">
                     </span>
                 </form>
-                <button class="nextchk">NEXT</button>
+                <button class="nextbtn nextdlvr">NEXT</button>
             </section>
-            <section class="pay"></section>
-            <section class="conf"></section>
+            <section class="pay">
+                <form>
+                    <div class="crow paymeth">
+                        <span>
+                            <label>PAYPAL</label>
+                            <div class="paypal"></div>
+                        </span>
+                        <span>
+                            <label>CREDIT CARD</label>
+                            <div class="card"></div>
+                        </span>
+                    </div>
+                    <span>
+                        <label>ADRESS</label>
+                        <input type="text" name="address" placeholder="Adress">
+                    </span>
+                    <span>
+                        <label>CITY</label>
+                        <input type="text" name="city" placeholder="City">
+                    </span>
+                    <div class="crow">
+                        <span>
+                            <label>COUNTRY</label>
+                            <input type="text" name="country" placeholder="Country">
+                        </span>
+                        <span>
+                            <label>POSTAL CODE</label>
+                            <input type="text" name="postcode" placeholder="Postal code">
+                        </span>
+                    </div>
+                    <span>
+                        <label>PHONE</label>
+                        <input type="tel" name="phone" placeholder="Phone">
+                    </span>
+                </form>
+                <button class="prevbtn prevpay">PREVIOUS</button>
+                <button class="nextbtn nextpay">NEXT</button>
+            </section>
+            <section class="conf">
+                <button class="prevbtn prevconf">PREVIOUS</button>
+                <button class="nextbtn finish">FINISH</button>
+            </section>
         </main>
         <footer id="footer">
             <div class="gradol"></div>

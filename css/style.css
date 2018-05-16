@@ -1297,9 +1297,10 @@ button {
         #wrapper_chk {
             display: grid;
             overflow: hidden;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             margin: 0px;
+            box-sizing: border-box;
             grid-template-columns: 1fr;
             grid-template-areas: 
             "chk"
@@ -1307,12 +1308,17 @@ button {
         }
 
         .chk {
-            padding-top: 90px;
+            padding-top: 200px;
             grid-area: chk;
             height: 100vh;
+            min-height: 750px;
+            overflow: hidden;
+            box-sizing: border-box;
         }
+
         .progress {
-            position: relative;
+            position: absolute;
+            top: 100px;
             width: 100vw;
             margin: auto;
             display: flex;
@@ -1352,27 +1358,104 @@ button {
         .active {
             background-color: rgb(77, 195, 216)
         }
-        /*#region PAYMENT*/
-        .dlvr form {
-            width: 50vw;
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+
+        .view {
+            left: 0!important;
+            transition: left 1s ease-in-out;
         }
 
-        .dlvr form input {
-            width: 100%;
+        .stepl {
+            left: -200vw!important;
+            transition: left 1s ease-in-out;
+        }
+
+        .stepr {
+            left: 100vw!important;
+            transition: left 1s ease-in-out;
+        }
+
+        .nextbtn {
+            position: absolute;
+            bottom: 70px;
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 10px;
+            width: 250px;
+            color: white;
+            right: 50px;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            outline: 0;
+        }
+
+        .prevbtn {
+            position: absolute;
+            bottom: 70px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            width: 250px;
+            color: white;
+            left: 50px;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            outline: 0;
+        }
+
+        /*#region DELIVERY*/
+
+        .dlvr {
+            width: 60vw;
+            border: solid black 2px;
+            border-radius: 70px;
+            margin: auto;
+            height: 70vh;
+            padding: 50px;
+            box-sizing: border-box; 
+            min-height: 550px;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            right: 0;
+        }
+
+        .chk form {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .crow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .chk form input {
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box; 
+            padding: 10px;
+            border: solid rgb(172, 172, 172) 0.6px;
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.30s ease-in-out;
+            outline: 0;
+        }
+
+        .chk form input:focus {
+            border: solid rgb(48, 48, 48) 0.7px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .chk span {
+            position: relative;
+            width: 100%;
             margin: 20px 10px;
         }
 
-        .dlvr span {
-            position: relative;
-        }
-
-        .dlvr span label {
+        .chk span label {
             font-family: 'Open Sans', sans-serif;
             position: absolute;
             top: -15px;
@@ -1380,6 +1463,82 @@ button {
             margin: 0px;
             font-size: 16px;
         }
+        /*  #endregion */
+
+        /*#region PAYMENT*/
+
+        .pay {
+            width: 60vw;
+            border: solid black 2px;
+            border-radius: 70px;
+            margin: auto;
+            height: 70vh;
+            padding: 50px;
+            box-sizing: border-box; 
+            min-height: 550px;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            right: 0;
+            left: 100vw;
+        }
+
+        .paypal {
+            height: 50px;
+            width: 100px;
+            background-image: url("../img/paypal_logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 5px 10px;
+            border: solid 2px black;
+        }
+
+        .card {
+            height: 50px;
+            width: 100px;
+            background-image: url("../img/mastercard_logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: solid 2px black;
+            padding: 5px 10px;
+        }
+
+        .paymeth {
+            justify-content: center!important;
+        }
+
+        .paymeth span {
+            position: relative;
+            width: 100px;
+            margin: 20px 40px;
+        }
+
+        .paymeth label {
+            top: -30px!important;
+        }
+
+        /*  #endregion */
+
+        /*#region CONFIRMATION*/
+
+        .conf {
+            width: 60vw;
+            border: solid black 2px;
+            border-radius: 70px;
+            margin: auto;
+            height: 70vh;
+            padding: 50px;
+            box-sizing: border-box; 
+            min-height: 550px;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            left: 100vw;
+        }
+
         /*  #endregion */
         
     /*  #endregion */
