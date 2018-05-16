@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Open+Sans|Poiret+One|Roboto|Varela" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/igorescobar/jQuery-Mask-Plugin/master/dist/jquery.mask.min.js"></script>
     <script src="js/jquery.paroller.min.js"></script>
     <script src="js/vegas/vegastxtmod.min.js"></script>
     <script src="js/glitch.jquery.js"></script>
@@ -37,10 +38,6 @@
         <a class="hdnvtxt2" href="women.html">
             <h4>WOMEN</h4>
         </a>
-        <div class="navcart">
-            <i class="material-icons md-36" id="cartic">shopping_cart</i>
-            <i class="material-icons md-36" id="cross">clear</i>
-        </div>
     </header>
     <nav class="nav">
         <ul>
@@ -71,37 +68,22 @@
             </li>
         </ul>
     </nav>
-    <div class="cart">
-        <h4>Your cart is empty</h4>
-        <section class="prods"></section>
-        <section class="ctinfo">
-            <a href="checkout.html">
-                <button type="submit" class="gtcheckout">
-                    <h4>CHECKOUT</h4>
-                </button>
-            </a>
-            <article class="subtotal">
-                <h5 class="sbt">SUBTOTAL</h5>
-                <h5 class="sbpr">$1337</h5>
-            </article>
-        </section>
-    </div>
     <div class="overlay"></div>
     <div id="wrapper_chk">
         <div class="chkbg"></div>
-        <div class="progress">
-            <div class="bar"></div>
-            <div class="stp1 step active">
-                <h4>Delivery</h4>
-            </div>
-            <div class="stp2 step">
-                <h4>Payment</h4>
-            </div>
-            <div class="stp3 step">
-                <h4>Finish</h4>
-            </div>
-        </div>
         <main class="chk">
+            <div class="progress">
+                <div class="bar"></div>
+                <div class="stp1 step active">
+                    <h4 class="txtdown">Delivery</h4>
+                </div>
+                <div class="stp2 step">
+                    <h4>Payment</h4>
+                </div>
+                <div class="stp3 step">
+                    <h4>Finish</h4>
+                </div>
+            </div>
             <section class="dlvr">
                 <form>
                     <div class="crow">
@@ -137,7 +119,9 @@
                         <input type="tel" name="phone" placeholder="Phone">
                     </span>
                 </form>
-                <button class="nextbtn nextdlvr">NEXT</button>
+                <button class="nextbtn nextdlvr">
+                    <i class="material-icons">arrow_forward_ios</i>
+                </button>
             </section>
             <section class="pay">
                 <form>
@@ -152,8 +136,8 @@
                         </span>
                     </div>
                     <span>
-                        <label>ADRESS</label>
-                        <input type="text" name="address" placeholder="Adress">
+                        <label>CARD NUMBER</label>
+                        <input type="text" name="cardnumber" placeholder="Card Number">
                     </span>
                     <span>
                         <label>CITY</label>
@@ -174,65 +158,71 @@
                         <input type="tel" name="phone" placeholder="Phone">
                     </span>
                 </form>
-                <button class="prevbtn prevpay">PREVIOUS</button>
-                <button class="nextbtn nextpay">NEXT</button>
+                <button class="prevbtn prevpay">
+                    <i class="material-icons">arrow_back_ios</i>
+                </button>
+                <button class="nextbtn nextpay">
+                    <i class="material-icons">arrow_forward_ios</i>
+                </button>
             </section>
             <section class="conf">
-                <button class="prevbtn prevconf">PREVIOUS</button>
+                <button class="prevbtn prevconf">
+                    <i class="material-icons">arrow_back_ios</i>
+                </button>
                 <button class="nextbtn finish">FINISH</button>
             </section>
         </main>
-        <footer id="footer">
-            <div class="gradol"></div>
-            <div class="ctnftimg"></div>
-            <article class="texts">
-                <section class="about">
-                    <h3>ABOUT STYLE57</h3>
-                    <ul class="aboutlist">
-                        <li>
-                            <a href="#">
-                                <h4>STORY</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>TERMS</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>LEGAL</h4>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="support">
-                    <h3>SUPPORT</h3>
-                    <ul class="supportlist">
-                        <li>
-                            <a href="#">
-                                <h4>FAQ</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html">
-                                <h4>CONTACT</h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>HELP</h4>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-            <form class="sub">
-                <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-                <input type="text" name="submail" id="submail">
-                <button type="submit" id="subbtn">SUBMIT</button>
-            </form>
-        </footer>
+        <div class="chkcart">
+            <h2>CART</h2>
+            <h4>Your cart is empty</h4>
+            <section class="prods">
+                <div class="cartprod cp1">
+                    <div class="cpimg" style="background-image: url(&quot;img/jacket.jpg&quot;)"></div>
+                    <article class="cptxt">
+                        <h2>Jacket</h2>
+                        <h3>$1337</h3>
+                    </article>
+                    <i class="material-icons md-36 md-light cpdel">close</i>
+                </div>
+                <div class="cartprod cp2">
+                    <div class="cpimg" style="background-image: url(&quot;img/swshirt.jpg&quot;)"></div>
+                    <article class="cptxt">
+                        <h2>Sweatshirt</h2>
+                        <h3>$1337</h3>
+                    </article>
+                    <i class="material-icons md-36 md-light cpdel">close</i>
+                </div>
+                <div class="cartprod cp3">
+                    <div class="cpimg" style="background-image: url(&quot;img/shoes.jpg&quot;)"></div>
+                    <article class="cptxt">
+                        <h2>Shoes</h2>
+                        <h3>$1337</h3>
+                    </article>
+                    <i class="material-icons md-36 md-light cpdel">close</i>
+                </div>
+                <div class="cartprod cp4">
+                    <div class="cpimg" style="background-image: url(&quot;img/tshirt.jpg&quot;)"></div>
+                    <article class="cptxt">
+                        <h2>T-Shirt</h2>
+                        <h3>$1337</h3>
+                    </article>
+                    <i class="material-icons md-36 md-light cpdel">close</i>
+                </div>
+                <div class="cartprod cp5">
+                    <div class="cpimg" style="background-image: url(&quot;img/tshirt.jpg&quot;)"></div>
+                    <article class="cptxt">
+                        <h2>T-Shirt</h2>
+                        <h3>$1337</h3>
+                    </article>
+                    <i class="material-icons md-36 md-light cpdel">close</i>
+                </div>
+
+                <article class="subtotal">
+                    <h5 class="sbt">SUBTOTAL</h5>
+                    <h5 class="sbpr">$6685</h5>
+                </article>
+            </section>
+        </div>
     </div>
 </body>
 

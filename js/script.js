@@ -53,6 +53,10 @@ $(document).ready(function () {
         });
 
         function dlvr() {
+            $('.stp1 h4').addClass("txtdown");
+            $('.stp2 h4').removeClass("txtdown");
+            $('.stp3 h4').removeClass("txtdown");
+
             $('.dlvr').addClass("view");
             $('.dlvr').removeClass("stepl");
             $('.pay').addClass("stepr");
@@ -63,6 +67,10 @@ $(document).ready(function () {
         }
 
         function pay() {
+            $('.stp1 h4').removeClass("txtdown");
+            $('.stp2 h4').addClass("txtdown");
+            $('.stp3 h4').removeClass("txtdown");
+
             $('.pay').addClass("view");
             $('.conf').removeClass("view");
             $('.pay').removeClass("stepr");
@@ -73,6 +81,10 @@ $(document).ready(function () {
         }
 
         function conf() {
+            $('.stp1 h4').removeClass("txtdown");
+            $('.stp2 h4').removeClass("txtdown");
+            $('.stp3 h4').addClass("txtdown");
+
             $('.pay').removeClass("view");
             $('.conf').addClass("view");
             $('.conf').removeClass("stepl, stepr");
@@ -85,6 +97,8 @@ $(document).ready(function () {
         }
 
     }
+
+    $('input[name="cardnumber"]').mask("9999 9999 9999 9999");
 
     $(".paroller").paroller({ factor: '-0.3', type: 'background', direction: 'vertical' });
     //  TITLE GLITCH
@@ -185,6 +199,10 @@ $(document).ready(function () {
     });
 
     var sbtot = 0
+    
+    if ($("#wrapper_chk").length) {
+        sbtot = 6685
+    };
 
     //  ADD CART 
     $(".addcart").click(function () {
@@ -215,7 +233,7 @@ $(document).ready(function () {
         $('.sbpr').text("$" + sbtot);
     });
 
-    $('.cart').on('click', '.cpdel', function () {
+    $('.cart, .chkcart').on('click', '.cpdel', function () {
         $(this).parent().remove();
         if ($(".cartprod").length == false) {
             $('.ctinfo').hide();
@@ -223,7 +241,7 @@ $(document).ready(function () {
         var cp = $(".cartprod").length + 1
         if (cp == 1) {
             $('#cartic h3').text('');
-            $('.cart > h4').show();
+            $('.cart > h4, .chkcart > h4').show();
         } else {
             $('#cartic h3').text(cp - 1);
         };
