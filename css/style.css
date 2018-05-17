@@ -25,6 +25,7 @@ h3 {
 
 h4 {
     font-family: 'Poiret One', sans-serif;
+    margin: 0px;
 }
 
 h5 {
@@ -903,7 +904,7 @@ button {
             font-family: 'Montserrat', sans-serif;
         }
 
-        .producttxt h3,h4 {
+        .producttxt h3, .producttxt h4 {
             margin: 0px;
             padding-left: 20px;
         }
@@ -1294,6 +1295,7 @@ button {
     /*  #endregion */
     
     /*#region--------CHECKOUT--------*/
+
         #wrapper_chk {
             position: relative;
             overflow: hidden;
@@ -1317,12 +1319,14 @@ button {
         }
 
         .chk {
-            padding-top: 200px;
+            padding-top: 170px;
             grid-area: chk;
             height: 100vh;
             width: 50vw;
+            min-width: 550px;
             min-height: 750px;
             box-sizing: border-box;
+            position: relative;
         }
 
         .progress {
@@ -1367,7 +1371,7 @@ button {
         }
 
         .txtdown {
-            top: 60px!important;
+            top: 40px!important;
             left: -115px!important;
             font-size: 2em;
             transition: all 1s ease;
@@ -1382,13 +1386,20 @@ button {
             transition: left 1s ease-in-out;
         }
 
+        .viewconf {
+            left: 0!important;
+            right: 0!important;
+            margin: 50px auto!important;
+            transition: left 1s ease-in-out;
+        }
+
         .stepl {
             left: -200vw!important;
             transition: left 1s ease-in-out;
         }
 
         .stepr {
-            left: 100vw!important;
+            left: 110vw!important;
             transition: left 1s ease-in-out;
         }
 
@@ -1397,14 +1408,16 @@ button {
             background-color: rgba(0, 0, 0, 0.6);
             padding: 10px;
             color: white;
-            right: -50px;
+            right: 0px;
             width: 50px;
             cursor: pointer;
             border: none;
             font-size: inherit;
+            display: none;
             outline: 0;
             top: 50%;
             transform: translateY(-50%);
+            transition: all 0.5s ease;
         }
 
         .prevbtn {
@@ -1429,9 +1442,8 @@ button {
             color: white;
             height: 70vh;
             z-index: 90;
-            margin-top: 200px;
             padding: 20px;
-            margin: auto;
+            margin: 170px auto 0px auto;
             transition: 0.5s ease-in-out all;
             box-sizing: border-box;
             font-size: 70%;
@@ -1445,7 +1457,9 @@ button {
         }
 
         .chkcart .prods {
-            height: 100%;
+            height: auto;
+            max-height: 50vh;
+            position: relative;
             overflow-y: auto;
         }
 
@@ -1499,16 +1513,24 @@ button {
             bottom: -10px;
         }
 
+        .shownxt {
+            display: block;
+            right: -50px;
+            transition: all 0.5s ease;
+        }
+
         /*#region DELIVERY*/
 
         .dlvr {
-            position: absolute;
+            width: 40vw;
+            min-width: 400px;
             margin: 50px;
             margin-left: 100px;
-            height: 60vh;
+            height: auto;
             padding: 50px;
             box-sizing: border-box; 
-            min-height: 550px;
+            min-height: 500px;
+            position: absolute;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             left: 0;
@@ -1534,14 +1556,14 @@ button {
             width: 100%;
             box-sizing: border-box; 
             padding: 10px;
-            border: solid rgb(172, 172, 172) 0.6px;
+            border: inset rgb(172, 172, 172) 0.6px;
             font-family: 'Open Sans', sans-serif;
             transition: all 0.30s ease-in-out;
             outline: 0;
         }
 
         .chk form input:focus {
-            border: solid rgb(48, 48, 48) 0.7px;
+            border: inset rgb(53, 53, 53) 1px;
             transition: all 0.3s ease-in-out;
         }
 
@@ -1559,18 +1581,22 @@ button {
             margin: 0px;
             font-size: 16px;
         }
+
+        .dlvr p {
+            margin: 0px;
+            font-size: 0.5em;
+        }
         /*  #endregion */
 
         /*#region PAYMENT*/
 
         .pay {
-            width: 60vw;
+            width: 40vw;
             margin: 50px;
             margin-left: 100px;
-            height: 60vh;
             padding: 50px;
             box-sizing: border-box; 
-            min-height: 550px;
+            min-height: 500px;
             position: absolute;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
@@ -1602,7 +1628,7 @@ button {
         }
 
         .activepay {
-            background-color: rgb(201, 201, 201);
+            background-color: rgb(226, 226, 226);
             transition: background-color 0.5s ease;
         }
 
@@ -1630,17 +1656,105 @@ button {
         /*#region CONFIRMATION*/
 
         .conf {
-            width: 60vw;
-            margin: 50px;
-            margin-left: 100px;
-            height: 60vh;
+            width: 80vw;
+            margin: 50px auto;
+            margin-left: 150px;
             padding: 50px;
             box-sizing: border-box; 
-            min-height: 550px;
-            position: relative;
+            min-height: 500px;
+            position: fixed;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            left: 100vw;
+            left: 110vw;
+        }
+
+        .odlist {
+            list-style: none;
+            padding: 0px;
+            width: 30%;
+        }
+
+        .odlist li {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px;
+            position: relative;
+        }
+
+        .odlist h3 {
+            position: absolute;
+            left: 0px;
+            margin-bottom: 5px;
+        }
+
+        .odlist h2, .odlist h3 {
+            margin: 0px;
+        }
+
+        .odlist .subtotal {
+            color: white;
+            font-size: 1.3em;
+            width: 100%;
+            position: relative;
+        }
+
+        .delconf {
+            list-style: none;
+            padding: 0px;
+            width: 30%;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .delconf h3 {
+            margin: 10px 0px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 30px;
+            min-width: 100px;
+            min-height: 41px;
+            padding: 5px
+        }
+
+        .delconf label {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0px;
+            top: 10px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .delconf .crow {
+            display: flex;
+            flex-direction: row;
+            justify-content: inherit;
+        }
+
+        .delconf .crow li {
+            margin-right: 10px;
+            width: 100%;
+        }
+
+        .delconf .crow li:nth-child(1) {
+            margin-right: 10px;
+        }
+
+        .orderbtn {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            margin: auto;
+            left: 0px;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 250px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            outline: 0;
+            font-size: 2em;
         }
 
         /*  #endregion */

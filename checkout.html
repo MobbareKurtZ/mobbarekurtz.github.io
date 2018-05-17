@@ -88,29 +88,29 @@
                 <form>
                     <div class="crow">
                         <span>
-                            <label>FIRST NAME</label>
+                            <label>FIRST NAME *</label>
                             <input type="text" name="firstname" placeholder="First name">
                         </span>
                         <span>
-                            <label>LAST NAME</label>
+                            <label>LAST NAME *</label>
                             <input type="text" name="lastname" placeholder="Last name">
                         </span>
                     </div>
                     <span>
-                        <label>ADRESS</label>
-                        <input type="text" name="address" placeholder="Adress">
+                        <label>ADRESS *</label>
+                        <input type="text" name="address" placeholder="Address">
                     </span>
                     <span>
-                        <label>CITY</label>
+                        <label>CITY *</label>
                         <input type="text" name="city" placeholder="City">
                     </span>
                     <div class="crow">
                         <span>
-                            <label>COUNTRY</label>
+                            <label>COUNTRY *</label>
                             <input type="text" name="country" placeholder="Country">
                         </span>
                         <span>
-                            <label>POSTAL CODE</label>
+                            <label>POSTAL CODE *</label>
                             <input type="text" name="postcode" placeholder="Postal code">
                         </span>
                     </div>
@@ -119,6 +119,7 @@
                         <input type="tel" name="phone" placeholder="Phone">
                     </span>
                 </form>
+                <p>* Obligatory</p>
                 <button class="nextbtn nextdlvr">
                     <i class="material-icons">arrow_forward_ios</i>
                 </button>
@@ -172,10 +173,74 @@
                 </button>
             </section>
             <section class="conf">
+                <h2>Confirmation</h2>
+                <ul class="odlist">
+                    <li>
+                        <h3>Jacket</h3>
+                        <h4>$1337</h4>
+                    </li>
+                    <li>
+                        <h3>Sweatshirt</h3>
+                        <h4>$1337</h4>
+                    </li>
+                    <li>
+                        <h3>Shoes</h3>
+                        <h4>$1337</h4>
+                    </li>
+                    <li>
+                        <h3>T-Shirt</h3>
+                        <h4>$1337</h4>
+                    </li>
+                    <li>
+                        <h3>T-Shirt</h3>
+                        <h4>$1337</h4>
+                    </li>
+                    <hr>
+                    <li>
+                        <article class="subtotal">
+                            <h5 class="sbt">SUBTOTAL </h5>
+                            <h5 class="sbpr">$6685</h5>
+                        </article>
+                    </li>
+                </ul>
+                <ul class="delconf">
+                    <div class="crow">
+                        <li class="fname">
+                            <label>First name</label>
+                            <h3></h3>
+                        </li>
+                        <li class="lname">
+                            <label>Last name</label>
+                            <h3></h3>
+                        </li>
+                    </div>
+                    <li class="adrs">
+                        <label>Address</label>
+                        <h3></h3>
+                    </li>
+                    <li class="city">
+                        <label>City</label>
+                        <h3></h3>
+                    </li>
+                    <div class="crow">
+                        <li class="cntry">
+                            <label>Country</label>
+                            <h3></h3>
+                        </li>
+                        <li class="pstc">
+                            <label>Postal code</label>
+                            <h3></h3>
+                        </li>
+                    </div>
+                    <li class="phone">
+                        <label>Phone</label>
+                        <h3></h3>
+                    </li>
+                </ul>
                 <button class="prevbtn prevconf">
                     <i class="material-icons">arrow_back_ios</i>
                 </button>
-                <button class="nextbtn finish">FINISH</button>
+                <button class="orderbtn">ORDER</button>
             </section>
         </main>
         <div class="chkcart">
@@ -222,12 +287,11 @@
                     </article>
                     <i class="material-icons md-36 md-light cpdel">close</i>
                 </div>
-
-                <article class="subtotal">
-                    <h5 class="sbt">SUBTOTAL</h5>
-                    <h5 class="sbpr">$6685</h5>
-                </article>
             </section>
+            <article class="subtotal">
+                <h5 class="sbt">SUBTOTAL</h5>
+                <h5 class="sbpr">$6685</h5>
+            </article>
         </div>
     </div>
 </body>

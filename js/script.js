@@ -50,9 +50,15 @@ $(document).ready(function () {
         });
         $('.nextpay').click(conf);
         $('.nextpay').click(function () {
+            $('.chkcart').animate({
+                top: "1000"
+            });
         });
         $('.prevconf').click(pay);
         $('.prevconf').click(function () {
+            $('.chkcart').animate({
+                top: "0"
+            });
             $('.stp3').removeClass("active");
         });
 
@@ -76,7 +82,7 @@ $(document).ready(function () {
             $('.stp3 h4').removeClass("txtdown");
 
             $('.pay').addClass("view");
-            $('.conf').removeClass("view");
+            $('.conf').removeClass("viewconf");
             $('.pay').removeClass("stepr");
             $('.pay').removeClass("stepl");
             $('.dlvr').addClass("stepl");
@@ -90,7 +96,7 @@ $(document).ready(function () {
             $('.stp3 h4').addClass("txtdown");
 
             $('.pay').removeClass("view");
-            $('.conf').addClass("view");
+            $('.conf').addClass("viewconf");
             $('.conf').removeClass("stepl, stepr");
             $('.dlvr').addClass("stepl");
             $('.pay').addClass("stepl");
@@ -118,6 +124,26 @@ $(document).ready(function () {
             $(".cpaypal input").addClass('dsblpay');
         });
 
+        if (!$('.dlvr').hasClass('stepl')) {
+            $('.dlvr form').keyup(function () {
+                if ($('input[name="firstname"]').val() && $('input[name="lastname"]').val() && $('input[name="address"]').val() && $('input[name="city"]').val() && $('input[name="country"]').val() && $('input[name="postcode"]').val()) {
+                    $('.nextdlvr').addClass('shownxt');
+                } else {
+                    $('.nextdlvr').removeClass('shownxt');
+                }
+            });
+        }
+
+        //  CHECKOUT FORM 
+        $('.nextpay').click(function () {
+            $('.fname h3').text($('input[name="firstname"]').val());
+            $('.lname h3').text($('input[name="lastname"]').val());
+            $('.adrs h3').text($('input[name="address"]').val());
+            $('.city h3').text($('input[name="city"]').val());
+            $('.cntry h3').text($('input[name="country"]').val());
+            $('.pstc h3').text($('input[name="postcode"]').val());
+            $('.phone h3').text($('input[name="phone"]').val());
+        });
     }
 
     $(".paroller").paroller({ factor: '-0.3', type: 'background', direction: 'vertical' });
