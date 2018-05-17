@@ -19,6 +19,10 @@ $(document).ready(function () {
 
     //  CHECKOUT
     if ($("#wrapper_chk").length) {
+        $('input[name="cardnumber"]').mask("0000 0000 0000 0000");
+        $('input[name="phone"]').mask('(+00) 0000-0000');
+        $('input[name="expdate"]').mask('00 / 00');
+        $('input[name="cvc"]').mask('000');
         var stp1_pos = $(".stp1").offset().left;
         var stp2_pos = $(".stp2").offset().left;
         var w1 = stp2_pos - stp1_pos
@@ -96,9 +100,25 @@ $(document).ready(function () {
             }, 1000);
         }
 
-    }
+        $('.paypal').click(function () {
+            $(this).addClass("activepay");
+            $('.card').removeClass("activepay");
+            $(".ccard input").prop('disabled', true);
+            $(".ccard input").addClass('dsblpay');
+            $(".cpaypal input").prop('disabled', false);
+            $(".cpaypal input").removeClass('dsblpay');
+        });
 
-    $('input[name="cardnumber"]').mask("9999 9999 9999 9999");
+        $('.card').click(function () {
+            $(this).addClass("activepay");
+            $('.paypal').removeClass("activepay");
+            $(".ccard input").prop('disabled', false);
+            $(".ccard input").removeClass('dsblpay');
+            $(".cpaypal input").prop('disabled', true);
+            $(".cpaypal input").addClass('dsblpay');
+        });
+
+    }
 
     $(".paroller").paroller({ factor: '-0.3', type: 'background', direction: 'vertical' });
     //  TITLE GLITCH
@@ -199,7 +219,7 @@ $(document).ready(function () {
     });
 
     var sbtot = 0
-    
+
     if ($("#wrapper_chk").length) {
         sbtot = 6685
     };

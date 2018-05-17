@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Open+Sans|Poiret+One|Roboto|Varela" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="https://raw.githubusercontent.com/igorescobar/jQuery-Mask-Plugin/master/dist/jquery.mask.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.paroller.min.js"></script>
     <script src="js/vegas/vegastxtmod.min.js"></script>
     <script src="js/glitch.jquery.js"></script>
@@ -135,28 +135,34 @@
                             <div class="card"></div>
                         </span>
                     </div>
-                    <span>
-                        <label>CARD NUMBER</label>
-                        <input type="text" name="cardnumber" placeholder="Card Number">
-                    </span>
-                    <span>
-                        <label>CITY</label>
-                        <input type="text" name="city" placeholder="City">
-                    </span>
-                    <div class="crow">
+                    <div class="ccard">
                         <span>
-                            <label>COUNTRY</label>
-                            <input type="text" name="country" placeholder="Country">
+                            <label>CARD NUMBER</label>
+                            <input type="text" name="cardnumber" placeholder="0000-0000-0000-0000">
                         </span>
-                        <span>
-                            <label>POSTAL CODE</label>
-                            <input type="text" name="postcode" placeholder="Postal code">
-                        </span>
+                        <div class="crow">
+                            <span>
+                                <label>EXPIRY DATE</label>
+                                <input type="text" name="expdate" placeholder="MM / YY">
+                            </span>
+                            <span>
+                                <label>CV CODE</label>
+                                <input type="text" name="cvc" placeholder="CVC" disabled>
+                            </span>
+                        </div>
                     </div>
-                    <span>
-                        <label>PHONE</label>
-                        <input type="tel" name="phone" placeholder="Phone">
-                    </span>
+                    <div class="cpaypal">
+                        <div class="crow">
+                            <span>
+                                <label>MAIL ADDRESS</label>
+                                <input type="text" name="mail" placeholder="name.nameson@mail.com">
+                            </span>
+                            <span>
+                                <label>PASSWORD</label>
+                                <input type="password" name="password" placeholder="Password">
+                            </span>
+                        </div>
+                    </div>
                 </form>
                 <button class="prevbtn prevpay">
                     <i class="material-icons">arrow_back_ios</i>

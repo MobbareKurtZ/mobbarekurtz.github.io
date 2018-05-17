@@ -1302,6 +1302,7 @@ button {
             box-sizing: border-box;
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
 
@@ -1318,12 +1319,10 @@ button {
         .chk {
             padding-top: 200px;
             grid-area: chk;
-            width: 100vw;
             height: 100vh;
+            width: 50vw;
             min-height: 750px;
-            overflow: hidden;
             box-sizing: border-box;
-            left: -50px;
         }
 
         .progress {
@@ -1432,10 +1431,12 @@ button {
             z-index: 90;
             margin-top: 200px;
             padding: 20px;
-            margin-right: 100px;
+            margin: auto;
             transition: 0.5s ease-in-out all;
             box-sizing: border-box;
             font-size: 70%;
+            min-width: 330px;
+            min-height: 550px;
         }
 
         .chkcart h2 {
@@ -1501,14 +1502,13 @@ button {
         /*#region DELIVERY*/
 
         .dlvr {
-            width: 60vw;
+            position: absolute;
             margin: 50px;
             margin-left: 100px;
             height: 60vh;
             padding: 50px;
             box-sizing: border-box; 
             min-height: 550px;
-            position: absolute;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             left: 0;
@@ -1585,7 +1585,8 @@ button {
             background-repeat: no-repeat;
             background-position: center;
             padding: 5px 10px;
-            border: solid 2px black;
+            background-color: rgb(148, 148, 148);
+            transition: background-color 0.5s ease;
         }
 
         .card {
@@ -1595,8 +1596,19 @@ button {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            border: solid 2px black;
+            background-color: rgb(148, 148, 148);
             padding: 5px 10px;
+            transition: background-color 0.5s ease;
+        }
+
+        .activepay {
+            background-color: rgb(201, 201, 201);
+            transition: background-color 0.5s ease;
+        }
+
+        .dsblpay {
+            background-color: rgba(255, 255, 255, 0.466);
+            transition: background-color 0.5s ease;
         }
 
         .paymeth {
@@ -1625,7 +1637,7 @@ button {
             padding: 50px;
             box-sizing: border-box; 
             min-height: 550px;
-            position: absolute;
+            position: relative;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             left: 100vw;
