@@ -349,6 +349,7 @@ button {
         .sbt {
             float: left;
         }
+
         .sbpr {
             float: right;
         }
@@ -1582,7 +1583,7 @@ button {
             font-size: 16px;
         }
 
-        .dlvr p {
+        .chk p {
             margin: 0px;
             font-size: 0.5em;
         }
@@ -1921,20 +1922,36 @@ button {
             letter-spacing: 5px;
         }
 
-        .cart {
-            position: fixed;
+        .prods {
             height: 100%;
-            width: 70vw;
-            height: 100vh;
-            background: white;
-            z-index: 90;
-            margin-top: 60px;
-            right: -70vw;
-            transition: 0.5s ease-in-out all;
-            overflow-y: scroll;
+            overflow-y: auto;
         }
 
-        .cart h4 {
+        .cartprod {
+            background-color: rgba(255, 255, 255, 0.2);
+            height: 80px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .cart {
+            position: fixed;
+            color: white;
+            height: 100%;
+            width: 70vw;
+            height: 100%;
+            background: black;
+            z-index: 90;
+            padding-top: 60px;
+            right: -70vw;
+            transition: 0.5s ease-in-out all;
+            overflow-y: auto;
+        }
+
+        .cart > h4 {
             position: relative;
             top: 50%;
             transform: translateY(-50%);
@@ -1944,6 +1961,61 @@ button {
         .cartout {
             right: 0px;
             transition: 0.5s ease-in-out all;
+        }
+
+        .ctinfo {
+            background-color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            bottom: 0px;
+            height: 100px;
+            width: 100%;
+            color: black;
+            display: none;
+            z-index: 10;
+        }
+
+        .gtcheckout {
+            position: absolute;
+            top: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            width: 100px;
+            color: white;
+            margin: auto;
+            left: 0;
+            right: 0;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            outline: 0;
+        }
+
+        .gtcheckout h4 {
+            padding: 0px;
+            text-align: center;
+        }
+        
+        .ctinfo h5 {
+            margin: 10px;
+            font-weight: 100;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .subtotal {
+            position: absolute;
+            bottom: 0px;
+            width: 70%;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .sbt {
+            float: left;
+        }
+        
+        .sbpr {
+            float: right;
         }
 
         .paroller {
@@ -2528,16 +2600,6 @@ button {
             bottom: 0px;
             z-index: -10;
         }
-
-        .cartprod {
-            background-color: black;
-            height: 80px;
-            color: white;
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 5px;
-            position: relative;
-        }
         
         .cpimg {
             height: 100%;
@@ -2692,9 +2754,31 @@ button {
         }
         
         .prodimg {
-            height: 40vh;
-            width: 100vw;
+            height: 50vh;
             margin-top: 60px;
+            width: 100vw;
+            position: relative;
+        }
+
+        .prdimg1 {
+            background-image: url("../img/jacket.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .prdimg2 {
+            background-image: url("../img/tshirt.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+
+        .prdimg3 {
+            background-image: url("../img/shoes.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
         }
 
         .prodtitle {
@@ -2881,6 +2965,472 @@ button {
             z-index: -1;
         }
     /*  #endregion */
+    
+    /*#region--------CHECKOUT--------*/
+
+        #wrapper_chk {
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            max-width: 100vw;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .chkbg {
+            background-image: url('../img/wall3.jpg');
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            bottom: 0px;
+            z-index: -10;
+        }
+
+        .chk {
+            padding-top: 170px;
+            grid-area: chk;
+            height: 100vh;
+            width: 100vw;
+            min-height: 750px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .progress {
+            position: absolute;
+            top: 70px;
+            display: flex;
+            margin-bottom: 50px;
+            justify-content: center;
+            color: white;
+            height: 70px;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+
+        .bar {
+            top: 7px;
+            transition: 1s ease-in-out width;
+            width: 0px;
+            height: 10px;
+            position: absolute;
+            background-color: rgb(77, 195, 216)
+        }
+        
+        .step {
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin: 0px 10vw;
+            border: 4px solid white;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background-color: rgb(165, 165, 165);
+        }
+
+        .step h4 {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            left: -20px;
+            transition: all 1s ease;
+        }
+
+        .txtdown {
+            top: 40px!important;
+            left: -10px!important;
+            font-size: 2em;
+            transition: all 1s ease;
+        }
+
+        .active {
+            background-color: rgb(77, 195, 216)
+        }
+
+        .view {
+            left: 0!important;
+            transition: left 1s ease-in-out;
+        }
+
+        .viewconf {
+            left: 0!important;
+            transition: left 1s ease-in-out;
+        }
+
+        .stepl {
+            left: -200vw!important;
+            transition: left 1s ease-in-out;
+        }
+
+        .stepr {
+            left: 110vw!important;
+            transition: left 1s ease-in-out;
+        }
+
+        .nextbtn {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            color: white;
+            right: 0;
+            margin: auto;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            display: none;
+            outline: 0;
+            transition: all 0.5s ease;
+            bottom: 0px;
+        }
+
+        .prevbtn {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            color: white;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            outline: 0;
+            transition: all 0.5s ease;
+            bottom: 0px;
+        }
+
+        .chkcart {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 25vw;
+            color: white;
+            height: 70vh;
+            z-index: 90;
+            padding: 20px;
+            margin: 170px auto 0px auto;
+            transition: 0.5s ease-in-out all;
+            box-sizing: border-box;
+            min-width: 330px;
+            min-height: 550px;
+        }
+
+        .chkcart h2 {
+            margin-top: -5px;
+            text-align: center;
+        }
+
+        .chkcart .prods {
+            height: auto;
+            max-height: 80%;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .chkcart .cartprod {
+            background-color: rgba(0, 0, 0, 0.747);
+            height: 100px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        
+        .chkcart .cpimg {
+            height: 100%;
+            width: 30%;
+            background-size: 250%;
+            background-position: center;
+        }
+
+        .chkcart .cptxt {
+            margin: 5px;
+        }
+
+        .chkcart .cptxt h2, .chkcart .cptxt h3 {
+            margin: 5px;
+        }
+
+        .chkcart .cpdel {
+            position: absolute;
+            right: 5px;
+            top: 50px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 48px!important;
+        }
+
+        .chkcart > h4 {
+            margin: 20px auto;
+            padding: 0px;
+            text-align: center;
+            position: relative;
+            top: 40%;
+            transform: translateY(-50%);
+            display: none;
+        }
+
+        .chkcart .subtotal {
+            color: white;
+            font-size: 1.3em;
+            bottom: -10px;
+        }
+
+        .shownxt {
+            display: block;
+            transition: all 0.5s ease;
+        }
+
+        /*#region DELIVERY*/
+
+        .dlvr {
+            width: 100vw;
+            height: auto;
+            padding: 50px;
+            box-sizing: border-box; 
+            min-height: 500px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            left: 0;
+            right: 0;
+        }
+
+        .chk form {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .crow {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .chk form input {
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box; 
+            padding: 10px;
+            border: inset rgb(172, 172, 172) 0.6px;
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.30s ease-in-out;
+            outline: 0;
+        }
+
+        .chk form input:focus {
+            border: inset rgb(53, 53, 53) 1px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .chk span {
+            position: relative;
+            width: 100%;
+            margin: 20px 10px;
+        }
+
+        .chk span label {
+            font-family: 'Open Sans', sans-serif;
+            position: absolute;
+            top: -20px;
+            left: 0px;
+            margin: 0px;
+            font-size: 16px;
+        }
+
+        .chk p {
+            margin: 0px;
+            font-size: 1em;
+        }
+        /*  #endregion */
+
+        /*#region PAYMENT*/
+
+        .pay {
+            width: 100vw;
+            height: auto;
+            padding: 50px;
+            box-sizing: border-box; 
+            min-height: 500px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            left: 120vw;
+        }
+
+        .paypal {
+            height: 50px;
+            width: 100px;
+            background-image: url("../img/paypal_logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 5px 10px;
+            background-color: rgb(148, 148, 148);
+            transition: background-color 0.5s ease;
+        }
+
+        .card {
+            height: 50px;
+            width: 100px;
+            background-image: url("../img/mastercard_logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgb(148, 148, 148);
+            padding: 5px 10px;
+            transition: background-color 0.5s ease;
+        }
+
+        .activepay {
+            background-color: rgb(226, 226, 226);
+            transition: background-color 0.5s ease;
+        }
+
+        .dsblpay {
+            background-color: rgba(255, 255, 255, 0.466);
+            transition: background-color 0.5s ease;
+        }
+
+        .paymeth {
+            justify-content: center!important;
+            display: flex;
+            flex-flow: nowrap row;
+        }
+
+        .paymeth span {
+            position: relative;
+            width: 100px;
+            margin: 20px 40px;
+        }
+
+        .paymeth label {
+            top: -30px!important;
+        }
+
+        .ccfix {
+            top: -30px!important;
+        }
+
+        /*  #endregion */
+
+        /*#region CONFIRMATION*/
+
+        .conf {
+            width: 100vw;
+            height: auto;
+            padding: 50px;
+            box-sizing: border-box; 
+            min-height: 500px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            left: 120vw;
+        }
+
+        .odlist {
+            list-style: none;
+            padding: 0px;
+            width: 30%;
+        }
+
+        .odlist li {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px;
+            position: relative;
+        }
+
+        .odlist h3 {
+            position: absolute;
+            left: 0px;
+            margin-bottom: 5px;
+        }
+
+        .odlist h2, .odlist h3 {
+            margin: 0px;
+        }
+
+        .odlist .subtotal {
+            color: white;
+            font-size: 1.3em;
+            width: 100%;
+            position: relative;
+        }
+
+        .delconf {
+            list-style: none;
+            padding: 0px;
+            width: 30%;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .delconf h3 {
+            margin: 10px 0px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 30px;
+            min-width: 100px;
+            min-height: 41px;
+            padding: 5px
+        }
+
+        .delconf label {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0px;
+            top: 10px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .delconf .crow {
+            display: flex;
+            flex-direction: row;
+            justify-content: inherit;
+        }
+
+        .delconf .crow li {
+            margin-right: 10px;
+            width: 100%;
+        }
+
+        .delconf .crow li:nth-child(1) {
+            margin-right: 10px;
+        }
+
+        .orderbtn {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            margin: auto;
+            left: 0px;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 250px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            outline: 0;
+            font-size: 2em;
+        }
+
+        /*  #endregion */
+        
+    /*  #endregion */
+
 }
 
 .material-icons {

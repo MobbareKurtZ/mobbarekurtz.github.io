@@ -133,6 +133,22 @@ $(document).ready(function () {
                 }
             });
         }
+        $('.pay form').keyup(function () {
+            if ($('.card').hasClass('activepay')) {
+                if ($('input[name="cardnumber"]').val() && $('input[name="expdate"]').val() && $('input[name="cvc"]').val()) {
+                    $('.nextpay').addClass('shownxt');
+                } else {
+                    $('.nextpay').removeClass('shownxt');
+                }
+            }
+            if ($('.paypal').hasClass('activepay')) {
+                if ($('input[name="mail"]').val() && $('input[name="password"]').val()) {
+                    $('.nextpay').addClass('shownxt');
+                } else {
+                    $('.nextpay').removeClass('shownxt');
+                }
+            }
+        });
 
         //  CHECKOUT FORM 
         $('.nextpay').click(function () {
@@ -359,7 +375,10 @@ $(document).ready(function () {
             }, 1000);
         };
     });
-    $('.prodimg').slick({
-        dots: true
-    });
+
+    if ($('#wrapper_prd').length) {
+        $('.prodimg').slick({
+            dots: true
+        });
+    }
 });

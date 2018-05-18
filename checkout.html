@@ -98,7 +98,7 @@
                     </div>
                     <span>
                         <label>ADRESS *</label>
-                        <input type="text" name="address" placeholder="Address">
+                        <input type="text" name="address" placeholder="Adress">
                     </span>
                     <span>
                         <label>CITY *</label>
@@ -119,7 +119,7 @@
                         <input type="tel" name="phone" placeholder="Phone">
                     </span>
                 </form>
-                <p>* Obligatory</p>
+                <p>* Required to fill in</p>
                 <button class="nextbtn nextdlvr">
                     <i class="material-icons">arrow_forward_ios</i>
                 </button>
@@ -128,26 +128,26 @@
                 <form>
                     <div class="crow paymeth">
                         <span>
-                            <label>PAYPAL</label>
-                            <div class="paypal"></div>
-                        </span>
-                        <span>
                             <label>CREDIT CARD</label>
                             <div class="card"></div>
+                        </span>
+                        <span>
+                            <label>PAYPAL</label>
+                            <div class="paypal"></div>
                         </span>
                     </div>
                     <div class="ccard">
                         <span>
-                            <label>CARD NUMBER</label>
-                            <input type="text" name="cardnumber" placeholder="0000-0000-0000-0000">
+                            <label class="ccfix">CARD NUMBER *</label>
+                            <input type="text" name="cardnumber" placeholder="0000-0000-0000-0000" disabled>
                         </span>
                         <div class="crow">
                             <span>
-                                <label>EXPIRY DATE</label>
-                                <input type="text" name="expdate" placeholder="MM / YY">
+                                <label>EXPIRY DATE *</label>
+                                <input type="text" name="expdate" placeholder="MM / YY" disabled>
                             </span>
                             <span>
-                                <label>CV CODE</label>
+                                <label>CV CODE *</label>
                                 <input type="text" name="cvc" placeholder="CVC" disabled>
                             </span>
                         </div>
@@ -155,16 +155,17 @@
                     <div class="cpaypal">
                         <div class="crow">
                             <span>
-                                <label>MAIL ADDRESS</label>
-                                <input type="text" name="mail" placeholder="name.nameson@mail.com">
+                                <label>MAIL ADDRESS *</label>
+                                <input type="text" name="mail" placeholder="name.nameson@mail.com" disabled>
                             </span>
                             <span>
-                                <label>PASSWORD</label>
-                                <input type="password" name="password" placeholder="Password">
+                                <label>PASSWORD *</label>
+                                <input type="password" name="password" placeholder="Password" disabled>
                             </span>
                         </div>
                     </div>
                 </form>
+                <p>* Required to fill in</p>
                 <button class="prevbtn prevpay">
                     <i class="material-icons">arrow_back_ios</i>
                 </button>
@@ -173,8 +174,8 @@
                 </button>
             </section>
             <section class="conf">
-                <h2>Confirmation</h2>
-                <ul class="odlist">
+                <h2>Confirm order</h2>
+                <ul>
                     <li>
                         <h3>Jacket</h3>
                         <h4>$1337</h4>
@@ -195,52 +196,11 @@
                         <h3>T-Shirt</h3>
                         <h4>$1337</h4>
                     </li>
-                    <hr>
-                    <li>
-                        <article class="subtotal">
-                            <h5 class="sbt">SUBTOTAL </h5>
-                            <h5 class="sbpr">$6685</h5>
-                        </article>
-                    </li>
-                </ul>
-                <ul class="delconf">
-                    <div class="crow">
-                        <li class="fname">
-                            <label>First name</label>
-                            <h3></h3>
-                        </li>
-                        <li class="lname">
-                            <label>Last name</label>
-                            <h3></h3>
-                        </li>
-                    </div>
-                    <li class="adrs">
-                        <label>Address</label>
-                        <h3></h3>
-                    </li>
-                    <li class="city">
-                        <label>City</label>
-                        <h3></h3>
-                    </li>
-                    <div class="crow">
-                        <li class="cntry">
-                            <label>Country</label>
-                            <h3></h3>
-                        </li>
-                        <li class="pstc">
-                            <label>Postal code</label>
-                            <h3></h3>
-                        </li>
-                    </div>
-                    <li class="phone">
-                        <label>Phone</label>
-                        <h3></h3>
-                    </li>
                 </ul>
                 <button class="prevbtn prevconf">
                     <i class="material-icons">arrow_back_ios</i>
                 </button>
-                <button class="orderbtn">ORDER</button>
+                <button class="finish">FINISH</button>
             </section>
         </main>
         <div class="chkcart">
